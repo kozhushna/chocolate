@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/chocolate/static/css/main.e6c13ad2.css",
-    "main.js": "/chocolate/static/js/main.f232b374.js",
+    "main.css": "/chocolate/static/css/main.b5320759.css",
+    "main.js": "/chocolate/static/js/main.3d8d5248.js",
     "static/js/787.c899bc57.chunk.js": "/chocolate/static/js/787.c899bc57.chunk.js",
+    "static/media/Montserrat-Bold.ttf": "/chocolate/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
+    "static/media/Montserrat-SemiBold.ttf": "/chocolate/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
+    "static/media/Montserrat-Regular.ttf": "/chocolate/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
     "index.html": "/chocolate/index.html",
-    "main.e6c13ad2.css.map": "/chocolate/static/css/main.e6c13ad2.css.map",
-    "main.f232b374.js.map": "/chocolate/static/js/main.f232b374.js.map",
+    "main.b5320759.css.map": "/chocolate/static/css/main.b5320759.css.map",
+    "main.3d8d5248.js.map": "/chocolate/static/js/main.3d8d5248.js.map",
     "787.c899bc57.chunk.js.map": "/chocolate/static/js/787.c899bc57.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.f232b374.js"
+    "static/css/main.b5320759.css",
+    "static/js/main.3d8d5248.js"
   ]
 }
