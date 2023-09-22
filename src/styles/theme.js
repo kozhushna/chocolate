@@ -17,13 +17,14 @@ export const theme = Object.freeze({
     lightText: 'rgba(255, 255, 255, 0.70)',
     buttonHover: '#FCF1E0',
   },
-});
-export const devices = {
-  onlymobile: `max-width: ${sizes.onlymobile}`,
-  mobile: `min-width: ${sizes.mobile}`,
-  tablet: `min-width: ${sizes.tablet}`,
-  desktop: `min-width: ${sizes.desktop}`,
-  retina: 'min-device-pixel-ratio: 2',
-};
+  sizes: sizes,
 
-export const baseTransition = '250ms cubic-bezier(0.4, 0, 0.2, 1)';
+  devices: {
+    onlymobile: `max-width: ${sizes.onlymobile}`,
+    mobile: `min-width: ${sizes.mobile}`,
+    tablet: `min-width: ${sizes.tablet}`,
+    desktop: `min-width: ${sizes.desktop}`,
+    retina: 'min-device-pixel-ratio: 2',
+  },
+  baseTransition: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
+});

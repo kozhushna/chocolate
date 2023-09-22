@@ -1,11 +1,13 @@
-import { Container } from 'App.styled';
+import { Section, Container } from 'App.styled';
 
 function App() {
   return (
     <main>
-      <Container>
-        <p>Hello BITE!</p>
-      </Container>
+      <Section>
+        <Container>
+          <p>Hello BITE!</p>
+        </Container>
+      </Section>
     </main>
   );
 }

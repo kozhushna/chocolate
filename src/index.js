@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Global } from '@emotion/react';
-import { GlobalStyles } from 'styles';
+import { Global, ThemeProvider } from '@emotion/react';
+import { GlobalStyles, theme } from 'styles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Global styles={GlobalStyles} />
-    <App />
+    <ThemeProvider theme={theme}>
+      <Global styles={GlobalStyles} />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
