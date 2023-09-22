@@ -1,8 +1,12 @@
+import { Container } from 'App.styled';
+
 function App() {
   return (
-    <div className="App">
-      <p>Hello BITE!</p>
-    </div>
+    <main>
+      <Container>
+        <p>Hello BITE!</p>
+      </Container>
+    </main>
   );
 }
 
