@@ -15,6 +15,8 @@ export const Section = styled.section`
 
 export const Container = styled.div`
   padding: 0 20px;
+  margin: auto;
+  text-align: center;
 
   @media screen and (${props => props.theme.devices.mobile}) {
     width: ${props => props.theme.sizes.mobile};
