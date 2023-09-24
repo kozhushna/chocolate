@@ -47,7 +47,9 @@ export const GlobalStyles = css`
     min-height: 100vh;
 
     font-style: normal;
-    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.285717;
+    /* overflow: hidden; */
   }
 
   h1,
