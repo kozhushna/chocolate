@@ -45,9 +45,7 @@ export const GlobalStyles = css`
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-
     font-style: normal;
-    overflow: hidden;
   }
 
   h1,
