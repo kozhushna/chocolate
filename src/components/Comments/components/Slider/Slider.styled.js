@@ -4,11 +4,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export const StyledSwiper = styled(Swiper)`
   & .swiper-wrapper {
     padding-top: 42px;
+    align-items: stretch;
+  }
+  margin-bottom: 20px;
+  @media screen and (${props => props.theme.devices.tablet}) {
+    margin-bottom: 32px;
   }
 `;
 
 export const StyledLi = styled(SwiperSlide)`
   position: relative;
+  height: auto;
   padding-top: 56px;
   padding-left: 18px;
   padding-right: 18px;
@@ -27,6 +33,8 @@ export const Avatar = styled.img`
 
 export const UserName = styled.h3`
   margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.333333;
 `;
 
 export const UserComment = styled.p``;
