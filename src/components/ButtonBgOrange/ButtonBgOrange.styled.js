@@ -5,7 +5,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 40px;
+  padding: 12px 28px;
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
@@ -19,5 +19,10 @@ export const Button = styled.button`
   &:focus {
     background: ${theme.colors.buttonHover};
     color: ${theme.colors.accent};
+  }
+
+  @media screen and (${theme.devices.tablet}) {
+    font-size: 18px;
+    padding: 14px 40px;
   }
 `;
