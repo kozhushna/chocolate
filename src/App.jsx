@@ -6,7 +6,7 @@ function App() {
     <main>
       <Section>
         <Container>
-          <p>Hello BITE pull pasha!</p>
+          <p>Hello BITE</p>
           <HowItsMade />
         </Container>
       </Section>
