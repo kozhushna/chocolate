@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { theme } from './theme';
 
 import ttfRegular from '../fonts/Montserrat-Regular.ttf';
 import ttfMedium from '../fonts/Montserrat-Regular.ttf';
@@ -45,9 +46,10 @@ export const GlobalStyles = css`
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-
     font-style: normal;
-    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.285714;
+    color: ${theme.colors.primaryText};
   }
 
   h1,

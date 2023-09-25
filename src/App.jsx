@@ -1,23 +1,13 @@
 import { Section, Container } from 'App.styled';
-import { PrimaryButton } from 'components/PrimaryButton/PrimaryButton';
-import { theme } from 'styles';
+import HowItsMade from './components/HowItsMade/HowItsMade';
 
 function App() {
-  const handleClick = () => {
-    console.log('Button');
-  };
-
   return (
     <main>
       <Section>
         <Container>
           <p>Hello BITE pull pasha!</p>
-          <PrimaryButton action={handleClick} title="Send" />
-          <PrimaryButton
-            action={handleClick}
-            title="Send"
-            style={{ border: `1px solid ${theme.colors.darkText}` }}
-          />
+          <HowItsMade />
         </Container>
       </Section>
     </main>
