@@ -16,7 +16,6 @@ function App() {
           <HowItsMade />
         </Container>
       </Section>
-      
     </main>
   );
 }
