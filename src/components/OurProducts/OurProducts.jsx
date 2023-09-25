@@ -1,7 +1,11 @@
 import { Section, Container } from 'App.styled';
-import { products } from 'utils/products';
-import { ProductItem } from './components/ProductItem';
-import { ProductsTitle, TitleAccent } from './OurProducts.styled';
+import {
+  ProductsTitle,
+  TitleAccent,
+  PaginationBox,
+} from './OurProducts.styled';
+
+import { Slider } from './components/Slider/Slider';
 
 export const OurProducts = () => {
   return (
@@ -10,9 +14,8 @@ export const OurProducts = () => {
         <ProductsTitle>
           Our <TitleAccent>products</TitleAccent>
         </ProductsTitle>
-        {products.map(product => (
-          <ProductItem key={product.id} product={product}></ProductItem>
-        ))}
+        <Slider />
+        <PaginationBox className="pagination-container"></PaginationBox>
       </Container>
     </Section>
   );

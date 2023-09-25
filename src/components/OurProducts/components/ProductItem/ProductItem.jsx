@@ -1,5 +1,4 @@
 import {
-  Item,
   ItemDescr,
   ItemImage,
   ItemPrice,
@@ -9,7 +8,7 @@ import {
 export const ProductItem = ({ product }) => {
   const { image, retinaImage, name, description, price, altText } = product;
   return (
-    <Item>
+    <>
       <ItemImage
         srcSet={`${image} 1x, ${retinaImage} 2x`}
         src={image}
@@ -20,6 +19,6 @@ export const ProductItem = ({ product }) => {
       <ItemPrice>
         <p>{price} UAH</p>
       </ItemPrice>
-    </Item>
+    </>
   );
 };

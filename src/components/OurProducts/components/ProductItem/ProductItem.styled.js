@@ -1,24 +1,13 @@
 import styled from '@emotion/styled';
 
-export const Item = styled.li`
-  padding: 32px 52px 32px 53px;
-  border-radius: 15px;
-  border: ${props => `1px solid ${props.theme.colors.light}`};
-  background-color: ${props => props.theme.colors.white};
-  list-style: none;
-`;
-
 export const ItemImage = styled.img`
-  margin-bottom: 8px;
+  margin: 0 auto 8px;
 `;
 
 export const ItemTitle = styled.p`
-  /* color: #111; */
-  font-family: Montserrat;
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 24px; /* 133.333% */
+  line-height: 1.33;
   letter-spacing: -0.36px;
   text-transform: uppercase;
   margin-bottom: 2px;
