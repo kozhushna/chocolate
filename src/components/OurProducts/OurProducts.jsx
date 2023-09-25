@@ -5,7 +5,7 @@ import {
   PaginationBox,
 } from './OurProducts.styled';
 
-import { Slider } from './components/Slider/Slider';
+import { ProductSlider } from './components/ProductSlider/ProductSlider';
 
 export const OurProducts = () => {
   return (
@@ -14,7 +14,7 @@ export const OurProducts = () => {
         <ProductsTitle>
           Our <TitleAccent>products</TitleAccent>
         </ProductsTitle>
-        <Slider />
+        <ProductSlider />
         <PaginationBox className="pagination-container"></PaginationBox>
       </Container>
     </Section>

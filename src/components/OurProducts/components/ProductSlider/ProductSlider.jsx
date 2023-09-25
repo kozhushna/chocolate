@@ -2,11 +2,11 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css/autoplay';
 import 'swiper/css';
 import { products } from 'utils/products';
-import { ProductSwiper, Item } from './Slider.styled';
+import { ProductSwiper, Item } from './ProductSlider.styled';
 import { ProductItem } from '../ProductItem/ProductItem';
 import { useEffect, useState } from 'react';
 
-export const Slider = () => {
+export const ProductSlider = () => {
   const [slidesCount, setSlidersCount] = useState(null);
 
   useEffect(() => {
