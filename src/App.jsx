@@ -8,6 +8,7 @@ function App() {
     <main>
       <Section>
         <Container>
+          <p>Hello BITE</p>
           <TasteSensation />
         </Container>
       </Section>

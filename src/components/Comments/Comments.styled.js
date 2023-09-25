@@ -44,21 +44,21 @@ export const PaginationBox = styled.ul`
   }
 `;
 
-export const StyledButton = styled.button`
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  height: 41px;
-  font-size: 14px;
-  font-weight: 600;
-  padding-left: 40px;
-  padding-right: 40px;
-  border: 1px solid #fd9222;
-  border-radius: 20.5px;
-  @media screen and (${props => props.theme.devices.tablet}) {
-    height: 50px;
-    font-size: 18px;
-    border-radius: 25px;
-  }
-`;
+// export const StyledButton = styled.button`
+//   display: flex;
+//   align-items: center;
+//   margin-left: auto;
+//   margin-right: auto;
+//   height: 41px;
+//   font-size: 14px;
+//   font-weight: 600;
+//   padding-left: 40px;
+//   padding-right: 40px;
+//   border: 1px solid #fd9222;
+//   border-radius: 20.5px;
+//   @media screen and (${props => props.theme.devices.tablet}) {
+//     height: 50px;
+//     font-size: 18px;
+//     border-radius: 25px;
+//   }
+// `;

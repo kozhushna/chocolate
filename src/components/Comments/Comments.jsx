@@ -1,8 +1,13 @@
 import { Container, Section } from 'App.styled';
-import { Accent, PaginationBox, StyledButton, Title } from './Comments.styled';
+import { Accent, PaginationBox, Title } from './Comments.styled';
 import { Slider } from './components/Slider/Slider';
+import { ButtonBgWhite } from 'components/ButtonBgWhite/ButtonBgWhite';
 
 export const Comments = () => {
+  const handleClick = () => {
+    console.log('comment clicked');
+  };
+
   return (
     <Section>
       <Container>
@@ -11,7 +16,7 @@ export const Comments = () => {
         </Title>
         <Slider />
         <PaginationBox className="pagination-box" />
-        <StyledButton>Leave a review</StyledButton>
+        <ButtonBgWhite action={handleClick} />
       </Container>
     </Section>
   );
