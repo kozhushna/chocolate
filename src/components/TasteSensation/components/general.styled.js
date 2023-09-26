@@ -8,12 +8,12 @@ export const ItemStyles = styled.div`
   border: 1px solid #fd9222;
   border-radius: 15%;
 
-  &:first-child {
+  &:first-of-type {
     background-color: #fd9222;
     color: #fff;
   }
 
-  &:nth-child(3) {
+  &:nth-of-type(3) {
     background-color: #1e1823;
     color: #fff;
   }
