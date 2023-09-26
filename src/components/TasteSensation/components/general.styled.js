@@ -1,12 +1,14 @@
 import styled from '@emotion/styled';
 
 export const ItemStyles = styled.div`
-  width: 270px;
+  width: 335px;
   height: 270px;
   padding: 28px;
   position: relative;
   border: 1px solid #fd9222;
   border-radius: 15%;
+  margin-bottom: 32px;
+  margin-right: 19px;
 
   &:first-of-type {
     background-color: #fd9222;
@@ -17,12 +19,20 @@ export const ItemStyles = styled.div`
     background-color: #1e1823;
     color: #fff;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 333px;
+    height: 270px;
+  }
 `;
 
 export const ImageContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin-right: 20px;
+`;
+
+export const StyledImage = styled.img`
+  margin: 0 auto;
 `;
 
 export const ImageContainerText = styled.p`
@@ -52,12 +62,22 @@ export const CardOverlay = styled.div`
   overflow: hidden;
   z-index: 1;
   border: 1px solid black;
-  border: ${props => (props.isHovered ? '1px solid black' : 'none')};
+  border: ${props => (props.isHovered ? '1px solid #fd9222' : 'none')};
 `;
 
 export const Cards = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 `;
 
 export const InfoTitle = styled.p`
@@ -112,4 +132,5 @@ export const InfoText = styled.p`
   letter-spacing: -0.28px;
   text-align: left;
   margin-top: 14px;
+  overflow: auto;
 `;
