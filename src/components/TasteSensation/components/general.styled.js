@@ -10,12 +10,12 @@ export const ItemStyles = styled.div`
   margin-bottom: 32px;
   margin-right: 19px;
 
-  &:first-child {
+  &:first-of-type {
     background-color: #fd9222;
     color: #fff;
   }
 
-  &:nth-child(3) {
+  &:nth-of-type(3) {
     background-color: #1e1823;
     color: #fff;
   }
