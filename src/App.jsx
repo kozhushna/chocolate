@@ -6,6 +6,7 @@ import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import { Modal } from 'components/Modal/Modal';
 import { useModal } from 'hooks/useModal';
 import { FormOderBuy } from 'components/OderBuy/OderBuy';
+import { OurProducts } from 'components/OurProducts/OurProducts';
 
 function App() {
   const { isModalOpen, openModal, closeModal } = useModal(); // test button 'Buy now' and modal, delete
@@ -23,6 +24,7 @@ function App() {
           <HowItsMade />
         </Container>
       </Section>
+      <OurProducts />
       <Comments />
       {/* test start */}
       <ButtonBgOrange action={openModal} />
