@@ -1,0 +1,23 @@
+.custom_scroll_element {
+    max-height: 140px;
+    overflow: auto;
+}
+
+.custom_scroll_element::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom_scroll_element::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+
+}
+
+.custom_scroll_element::-webkit-scrollbar-thumb {
+    background-color: #fd9222;
+    border-radius: 6px;
+}
+
+.custom_scroll_element::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
