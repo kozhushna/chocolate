@@ -1,12 +1,12 @@
 import React from 'react';
 import { Elements } from './Styles.styled';
-import Video from './Video';
+import VideoBox from './VideoBox';
 import List from './List';
 
 const HowItsMadeElements = () => {
   return (
     <Elements>
-      <Video />
+      <VideoBox />
       <List />
     </Elements>
   );

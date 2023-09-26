@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
-import { VideoBox } from './Styles.styled';
 
-const videoID = "BV6-aH2C4S4";
+const videoID = 'BV6-aH2C4S4';
 
-function Video() {
-  const [videoDimensions, setVideoDimensions] = useState({ width: '100%', height: '200px' });
+const Video = () => {
+  const [videoDimensions, setVideoDimensions] = useState({
+    width: '100%',
+    height: '200px',
+  });
   const [isVideoBoxVisible, setIsVideoBoxVisible] = useState(false);
 
   useEffect(() => {
@@ -31,26 +33,18 @@ function Video() {
   }, []);
 
   useEffect(() => {
-    setIsVideoBoxVisible(true); 
+    setIsVideoBoxVisible(true);
   }, []);
 
   const opts = {
     height: videoDimensions.height,
     width: videoDimensions.width,
     playerVars: {
-      autoplay: 0,
+      autoplay: 1,
     },
   };
 
-  return (
-    <div>
-      {isVideoBoxVisible && (
-        <VideoBox>
-          <YouTube videoId={videoID} opts={opts} />
-        </VideoBox>
-      )}
-    </div>
-  );
+  return <>{isVideoBoxVisible && <YouTube videoId={videoID} opts={opts} />}</>;
 }
 
-export default Video
+export default Video;

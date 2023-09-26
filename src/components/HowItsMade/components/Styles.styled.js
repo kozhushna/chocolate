@@ -9,13 +9,14 @@ export const Elements = styled.div`
   }
 `;
 
-export const VideoBox = styled.div`
+export const VideoWraper = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
   @media screen and (min-width: 768px) {
     width: 614px;
+    height: 400px;
   }
   @media screen and (min-width: 1200px) {
     width: 600px;
@@ -71,4 +72,30 @@ export const Item = styled.li`
     left: -16px;
     top: 5px;
   }
+`;
+
+export const CoverImage = styled.div`
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/MobilCover.jpg');
+  @media screen and (min-width: 768px) {
+    width: 614px;
+    height: 400px;
+    background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/Cover.jpg');
+  }
+  @media screen and (min-width: 1200px) {
+    width: 600px;
+    height: 400px;
+  }
+`;
+
+export const PlayButton = styled.button`
+  position: absolute;
+  color: #f5f4f4;
+  fill: currentColor;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
