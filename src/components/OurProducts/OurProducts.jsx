@@ -3,6 +3,7 @@ import {
   ProductsTitle,
   TitleAccent,
   PaginationBox,
+  SliderContainer,
 } from './OurProducts.styled';
 
 import { ProductSlider } from './components/ProductSlider/ProductSlider';
@@ -14,9 +15,11 @@ export const OurProducts = () => {
         <ProductsTitle>
           Our <TitleAccent>products</TitleAccent>
         </ProductsTitle>
+      </Container>
+      <SliderContainer>
         <ProductSlider />
         <PaginationBox className="pagination-container"></PaginationBox>
-      </Container>
+      </SliderContainer>
     </Section>
   );
 };

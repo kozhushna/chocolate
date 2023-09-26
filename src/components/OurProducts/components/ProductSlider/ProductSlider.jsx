@@ -7,25 +7,24 @@ import { ProductItem } from '../ProductItem/ProductItem';
 import { useEffect, useState } from 'react';
 
 export const ProductSlider = () => {
-  const [slidesCount, setSlidersCount] = useState(null);
+  const [slidesCount, setSlidersCount] = useState();
 
   useEffect(() => {
-    const handleScreenWidth = () => {
-      console.log(window.innerWidth);
-      if (window.innerWidth >= 1200) {
-        setSlidersCount(4);
-      }
-      if ((window.innerWidth < 1200) & (window.innerWidth >= 768)) {
-        setSlidersCount(2.6);
-      }
-      if (window.innerWidth < 768) {
-        setSlidersCount(1);
-      }
-    };
-
     window.addEventListener('resize', handleScreenWidth);
-    return window.removeEventListener('resize', handleScreenWidth);
+    return () => window.removeEventListener('resize', handleScreenWidth);
   }, [slidesCount]);
+
+  const handleScreenWidth = () => {
+    if (window.innerWidth >= 1200) {
+      return setSlidersCount(4);
+    }
+    if ((window.innerWidth < 1200) & (window.innerWidth >= 768)) {
+      return setSlidersCount(2.6);
+    }
+    if (window.innerWidth < 767) {
+      return setSlidersCount(1);
+    }
+  };
 
   const initialSlidesCount = () => {
     if (slidesCount) {
@@ -41,7 +40,6 @@ export const ProductSlider = () => {
       return 1;
     }
   };
-
   return (
     <ProductSwiper
       modules={[Autoplay, Pagination]}

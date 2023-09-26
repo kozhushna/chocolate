@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Container } from 'App.styled';
 
 export const ProductsTitle = styled.h2`
   color: ${props => props.theme.colors.primaryText};
@@ -39,5 +40,15 @@ export const PaginationBox = styled.ul`
   & .swiper-pagination-bullet-active {
     width: 28px;
     background-color: ${props => props.theme.colors.accent};
+  }
+`;
+
+export const SliderContainer = styled(Container)`
+  @media screen and (${props => props.theme.devices.tablet}) {
+    padding: 0 0 0 32px;
+  }
+
+  @media screen and (${props => props.theme.devices.desktop}) {
+    padding: 0 32px;
   }
 `;
