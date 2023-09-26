@@ -99,3 +99,18 @@ export const PlayButton = styled.button`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
+
+export const VideoBox = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 20px) ;
+  border-radius: 15px;
+  overflow: hidden;
+  @media screen and (min-width: 768px) {
+   position: static;
+   transform: translate(0, 0);
+   width: 100%;
+  }
+`;

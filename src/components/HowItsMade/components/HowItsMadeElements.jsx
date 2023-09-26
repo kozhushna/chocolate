@@ -4,6 +4,7 @@ import VideoBox from './VideoBox';
 import List from './List';
 
 const HowItsMadeElements = () => {
+  
   return (
     <Elements>
       <VideoBox />
