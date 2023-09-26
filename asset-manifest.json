@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chocolate/static/css/main.f81ba78a.css",
-    "main.js": "/chocolate/static/js/main.f5424b34.js",
+    "main.js": "/chocolate/static/js/main.df91fad6.js",
     "static/js/787.c899bc57.chunk.js": "/chocolate/static/js/787.c899bc57.chunk.js",
     "static/media/Montserrat-Bold.ttf": "/chocolate/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/chocolate/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
@@ -13,11 +13,11 @@
     "static/media/sprite.svg": "/chocolate/static/media/sprite.0524103d3b04c5fe41aa4ca74b178722.svg",
     "index.html": "/chocolate/index.html",
     "main.f81ba78a.css.map": "/chocolate/static/css/main.f81ba78a.css.map",
-    "main.f5424b34.js.map": "/chocolate/static/js/main.f5424b34.js.map",
+    "main.df91fad6.js.map": "/chocolate/static/js/main.df91fad6.js.map",
     "787.c899bc57.chunk.js.map": "/chocolate/static/js/787.c899bc57.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f81ba78a.css",
-    "static/js/main.f5424b34.js"
+    "static/js/main.df91fad6.js"
   ]
 }
