@@ -81,18 +81,21 @@ export const Slider = () => {
   const [slidesCount, setSlidersCount] = useState();
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1199) {
-        setSlidersCount(3);
-      }
-      if ((window.innerWidth < 1200) & (window.innerWidth > 767)) {
-        setSlidersCount(2);
-      }
-      if (window.innerWidth < 767) {
-        setSlidersCount(1);
-      }
-    });
+    window.addEventListener('resize', handleScreenWidth);
+    return () => window.removeEventListener('resize', handleScreenWidth);
   }, [slidesCount]);
+
+  const handleScreenWidth = () => {
+    if (window.innerWidth > 1199) {
+      setSlidersCount(3);
+    }
+    if ((window.innerWidth < 1200) & (window.innerWidth > 767)) {
+      setSlidersCount(2);
+    }
+    if (window.innerWidth < 767) {
+      setSlidersCount(1);
+    }
+  };
 
   const initialSlidesCount = () => {
     if (slidesCount) {

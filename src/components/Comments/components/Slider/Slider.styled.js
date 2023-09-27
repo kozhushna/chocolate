@@ -19,7 +19,7 @@ export const StyledLi = styled(SwiperSlide)`
   padding-left: 18px;
   padding-right: 18px;
   padding-bottom: 26px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid ${props => props.theme.colors.light};
   border-radius: 15px;
 `;
 
@@ -34,7 +34,7 @@ export const Avatar = styled.img`
 export const UserName = styled.h3`
   margin-bottom: 24px;
   font-size: 18px;
-  line-height: 1.333333;
+  line-height: 1.333334;
 `;
 
 export const UserComment = styled.p``;

@@ -10,7 +10,7 @@ import { ProductSlider } from './components/ProductSlider/ProductSlider';
 
 export const OurProducts = () => {
   return (
-    <Section>
+    <Section id="products">
       <Container>
         <ProductsTitle>
           Our <TitleAccent>products</TitleAccent>

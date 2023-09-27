@@ -34,31 +34,12 @@ export const PaginationBox = styled.ul`
   & .swiper-pagination-bullet {
     width: 13px;
     height: 13px;
-    background-color: #e7e7e7;
+    background-color: ${props => props.theme.colors.light};
     border-radius: 6.5px;
     transition: width 1200ms, background-color 1200ms;
   }
   & .swiper-pagination-bullet-active {
     width: 28px;
-    background-color: #fd9222;
+    background-color: ${props => props.theme.colors.accent};
   }
 `;
-
-// export const StyledButton = styled.button`
-//   display: flex;
-//   align-items: center;
-//   margin-left: auto;
-//   margin-right: auto;
-//   height: 41px;
-//   font-size: 14px;
-//   font-weight: 600;
-//   padding-left: 40px;
-//   padding-right: 40px;
-//   border: 1px solid #fd9222;
-//   border-radius: 20.5px;
-//   @media screen and (${props => props.theme.devices.tablet}) {
-//     height: 50px;
-//     font-size: 18px;
-//     border-radius: 25px;
-//   }
-// `;
