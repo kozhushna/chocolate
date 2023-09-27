@@ -30,6 +30,7 @@ function App() {
         </Section>
         <OurProducts />
         <Comments />
+        <Subscribe />
         {/* test start */}
         <ButtonBgOrange action={openModal} />
         {isModalOpen && (
