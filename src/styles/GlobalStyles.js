@@ -49,6 +49,7 @@ export const GlobalStyles = css`
     font-style: normal;
     font-size: 14px;
     line-height: 1.285717;
+    background-color: ${theme.colors.mainBackground};
     color: ${theme.colors.primaryText};
   }
 
