@@ -1,4 +1,10 @@
 import styled from '@emotion/styled';
+import mobileBackground from '../../images/Subscribe/subcribe-mobile.jpg';
+import mobileBackground2x from '../../images/Subscribe/subcribe-mobile@2x.jpg';
+import tabletBackground from '../../images/Subscribe/subcribe-tablet.jpg';
+import tabletBackground2x from '../../images/Subscribe/subcribe-tablet@2x.jpg';
+import desktopBackground from '../../images/Subscribe/subcribe-desktop.jpg';
+import desktopBackground2x from '../../images/Subscribe/subcribe-desktop@2x.jpg';
 
 export const SubscribeSection = styled.section`
   max-width: 1200px;
@@ -7,19 +13,38 @@ export const SubscribeSection = styled.section`
   margin: 0 auto;
   text-align: center;
   background-color: ${props => props.theme.colors.darkBackground};
+  background-image: url(${mobileBackground});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-  /* @media screen and (${props => props.theme.devices.mobile}) {
-    width: ${props => props.theme.sizes.mobile}px;
-  } */
+  @media screen and (${props => props.theme.devices.retina}),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${mobileBackground2x});
+  }
 
   @media screen and (${props => props.theme.devices.tablet}) {
     padding-top: 72px;
     padding-bottom: 72px;
+    background-image: url(${tabletBackground});
+
+    @media screen and (${props => props.theme.devices.retina}),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${tabletBackground2x});
+    }
   }
 
-  /* @media screen and (${props => props.theme.devices.desktop}) {
-    width: ${props => props.theme.sizes.desktop}px;
-  } */
+  @media screen and (${props => props.theme.devices.desktop}) {
+    background-image: url(${desktopBackground});
+
+    @media screen and (${props => props.theme.devices.retina}),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${desktopBackground2x});
+    }
+  }
 `;
 
 export const ContentHolder = styled.div`
@@ -30,7 +55,6 @@ export const ContentHolder = styled.div`
 `;
 
 export const Title = styled.h2`
-  /* color: ${props => props.theme.colors.white}; */
   max-width: 291px;
   color: ${props => props.theme.colors.white};
   font-size: 20px;
