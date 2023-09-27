@@ -1,6 +1,7 @@
 import { Section, Container } from 'App.styled';
 import HowItsMade from './components/HowItsMade/HowItsMade';
 import { Comments } from 'components/Comments/Comments';
+import { Subscribe } from 'components/SubscribeSection/Subscribe';
 import TasteSensation from 'components/TasteSensation/TasteSensation';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import { Modal } from 'components/Modal/Modal';
@@ -26,6 +27,7 @@ function App() {
       </Section>
       <OurProducts />
       <Comments />
+      <Subscribe />
       {/* test start */}
       <ButtonBgOrange action={openModal} />
       {isModalOpen && (
