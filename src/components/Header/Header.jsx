@@ -7,6 +7,7 @@ import { Socials } from './Socials/Socials';
 
 export const Header = () => {
   const [iconSize, setIconSize] = useState();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener('resize', handleScreenWidth);
@@ -28,14 +29,18 @@ export const Header = () => {
     } else return 28;
   };
 
+  const toggleMenu = () => {
+    isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
+  };
+
   return (
     <HeaderStyled>
       <ContainerStyled>
         <Logo />
-        <Nav children>
+        <Nav children isOpen={isMenuOpen} onClick={toggleMenu}>
           <Socials />
         </Nav>
-        <BurgerMenu type="button">
+        <BurgerMenu type="button" onClick={toggleMenu}>
           <Svg w={initialIconSize()} h={initialIconSize()} icon={'burger'} />
         </BurgerMenu>
       </ContainerStyled>
