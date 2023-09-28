@@ -9,12 +9,14 @@ import {
   UserComment,
   UserName,
 } from './Slider.styled';
-import Avatar_01 from '../../../../images/avatar_01_@1x.jpg';
-import Avatar_02 from '../../../../images/avatar_02_@1x.jpg';
-import Avatar_03 from '../../../../images/avatar_03_@1x.jpg';
-import Avatar_04 from '../../../../images/avatar_04_@1x.jpg';
-import Avatar_05 from '../../../../images/avatar_05_@1x.jpg';
-import Avatar_06 from '../../../../images/avatar_06_@1x.jpg';
+import Avatar_01 from '../../../../images/Comments/avatar_01_@1x.jpg';
+import Avatar_02 from '../../../../images/Comments/avatar_02_@1x.jpg';
+import Avatar_03 from '../../../../images/Comments/avatar_03_@1x.jpg';
+import Avatar_04 from '../../../../images/Comments/avatar_04_@1x.jpg';
+import Avatar_05 from '../../../../images/Comments/avatar_05_@1x.jpg';
+import Avatar_06 from '../../../../images/Comments/avatar_06_@1x.jpg';
+import Avatar_07 from '../../../../images/Comments/avatar_07_@1x.jpg';
+import Avatar_08 from '../../../../images/Comments/avatar_08_@1x.jpg';
 
 const Data = [
   {
@@ -41,9 +43,9 @@ const Data = [
   {
     id: '4',
     avatar: Avatar_04,
-    userName: 'Petro Poroshenko',
+    userName: 'Natalia Sus',
     userComment:
-      "This chocolate is just a masterpiece! Even better than my own! I'm just amazed! It's nice to feel that someone can do better))).",
+      'The chocolate assortment was delicious. Both dark and milk chocolate pieces were smooth and just right on the sweetness level.',
   },
   {
     id: '5',
@@ -59,24 +61,41 @@ const Data = [
     userComment:
       "I've been watching this team for a long time. If they took up this site, then this chocolate really deserves attention)).",
   },
+  {
+    id: '7',
+    avatar: Avatar_07,
+    userName: 'Danilo Nottingham',
+    userComment:
+      'This is delicious. It so rich and flavorful you don’t need to use as many. I love topping an apple with almond butter and these chips for a snack.',
+  },
+  {
+    id: '8',
+    avatar: Avatar_08,
+    userName: 'Irina Tydnyuk',
+    userComment:
+      "This is simply the best chocolate around, and I'm just thrilled to support a local company! Best local chocolate - world class :)",
+  },
 ];
 
 export const Slider = () => {
   const [slidesCount, setSlidersCount] = useState();
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1199) {
-        setSlidersCount(3);
-      }
-      if ((window.innerWidth < 1200) & (window.innerWidth > 767)) {
-        setSlidersCount(2);
-      }
-      if (window.innerWidth < 767) {
-        setSlidersCount(1);
-      }
-    });
+    window.addEventListener('resize', handleScreenWidth);
+    return () => window.removeEventListener('resize', handleScreenWidth);
   }, [slidesCount]);
+
+  const handleScreenWidth = () => {
+    if (window.innerWidth > 1199) {
+      setSlidersCount(3);
+    }
+    if ((window.innerWidth < 1200) & (window.innerWidth > 767)) {
+      setSlidersCount(2);
+    }
+    if (window.innerWidth < 767) {
+      setSlidersCount(1);
+    }
+  };
 
   const initialSlidesCount = () => {
     if (slidesCount) {

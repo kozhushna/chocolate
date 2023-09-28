@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Element } from 'react-scroll';
+import { animateScroll } from 'react-scroll';
+import './styleScroll.css';
 import {
   ItemStyles,
   ImageContainer,
@@ -10,18 +13,25 @@ import {
   InfoTitle,
   InfoText,
   LabelContainer,
+  StyledImage,
 } from './general.styled';
 
 const Item = ({ imageSrc, lable, defaultText, hoverText }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    animateScroll.scrollTo('myScrollElement');
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
-    <ItemStyles
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <ItemStyles onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <ImageContainer>
-        <img src={imageSrc} alt="Item" />
+        <StyledImage src={imageSrc} alt="Item" />
         <ImageContainerText>{defaultText}</ImageContainerText>
       </ImageContainer>
 
@@ -34,7 +44,9 @@ const Item = ({ imageSrc, lable, defaultText, hoverText }) => {
             <InfoLabelBenefits>the benefits</InfoLabelBenefits>
           </LabelContainer>
 
-          <InfoText>{hoverText}</InfoText>
+          <Element name="myScrollElement" className="custom_scroll_element">
+            <InfoText>{hoverText}</InfoText>
+          </Element>
         </Info>
       </CardOverlay>
     </ItemStyles>

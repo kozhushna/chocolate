@@ -19,15 +19,15 @@ export const Container = styled.div`
   text-align: center;
 
   @media screen and (${props => props.theme.devices.mobile}) {
-    width: ${props => props.theme.sizes.mobile};
+    width: ${props => props.theme.sizes.mobile}px;
   }
 
   @media screen and (${props => props.theme.devices.tablet}) {
     padding: 0 32px;
-    width: ${props => props.theme.sizes.tablet};
+    width: ${props => props.theme.sizes.tablet}px;
   }
 
   @media screen and (${props => props.theme.devices.desktop}) {
-    width: ${props => props.theme.sizes.desktop};
+    width: ${props => props.theme.sizes.desktop}px;
   }
 `;

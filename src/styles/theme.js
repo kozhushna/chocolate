@@ -1,8 +1,8 @@
 const sizes = {
-  onlymobile: '374px',
-  mobile: '375px',
-  tablet: '768px',
-  desktop: '1200px',
+  onlymobile: '374',
+  mobile: '375',
+  tablet: '768',
+  desktop: '1200',
 };
 
 export const theme = Object.freeze({
@@ -16,14 +16,15 @@ export const theme = Object.freeze({
     darkText: 'rgba(17, 17, 17, 0.70)',
     lightText: 'rgba(255, 255, 255, 0.70)',
     buttonHover: '#FCF1E0',
+    backdropActive: '#00000080',
   },
   sizes: sizes,
 
   devices: {
-    onlymobile: `max-width: ${sizes.onlymobile}`,
-    mobile: `min-width: ${sizes.mobile}`,
-    tablet: `min-width: ${sizes.tablet}`,
-    desktop: `min-width: ${sizes.desktop}`,
+    onlymobile: `max-width: ${sizes.onlymobile}px`,
+    mobile: `min-width: ${sizes.mobile}px`,
+    tablet: `min-width: ${sizes.tablet}px`,
+    desktop: `min-width: ${sizes.desktop}px`,
     retina: 'min-device-pixel-ratio: 2',
   },
   baseTransition: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
