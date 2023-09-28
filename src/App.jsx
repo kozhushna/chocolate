@@ -1,15 +1,17 @@
 import { Section, Container } from 'App.styled';
 import HowItsMade from './components/HowItsMade/HowItsMade';
 import { Comments } from 'components/Comments/Comments';
-import TasteSensation from 'components/TasteSensation/TasteSensation';
+// import TasteSensation from 'components/TasteSensation/TasteSensation';
+import {Footer} from 'components/Footer/Footer'
 
 function App() {
   return (
+    <>
     <main>
       <Section>
         <Container>
           <p>Hello BITE</p>
-          <TasteSensation />
+          {/* <TasteSensation /> */}
         </Container>
       </Section>
       <Section>
@@ -19,6 +21,8 @@ function App() {
       </Section>
       <Comments />
     </main>
+    <Footer />
+    </>
   );
 }
 
