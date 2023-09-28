@@ -30,8 +30,8 @@ export const SocialIcon = () => {
             <IconsButton href="https://www.instagram.com/">
                 <Svg icon="instagram" w={initialIconSize()} h={initialIconSize()}/>
             </IconsButton>
-            <IconsButton href="https://twitter.com/">
-                <Svg icon="twitter" w={initialIconSize()} h={initialIconSize()}/>
+            <IconsButton href="https://facebook.com/">
+                <Svg icon="facebook" w={initialIconSize()} h={initialIconSize()}/>
             </IconsButton>
         </Icons>
     )

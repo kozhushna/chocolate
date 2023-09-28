@@ -17,6 +17,7 @@ export const theme = Object.freeze({
     lightText: 'rgba(255, 255, 255, 0.70)',
     buttonHover: '#FCF1E0',
     backdropActive: '#00000080',
+    lightBorder: 'rgba(255, 255, 255, 0.10)',
   },
   sizes: sizes,
 

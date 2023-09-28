@@ -5,8 +5,8 @@ export const Contacts = () => {
         <ContactBox>
             <ContactTitle> Contact us</ContactTitle>
             <Contact>
-                <ContactLink href="tel:+380684439426">+380 (68) 443-94-26</ContactLink>
-                <ContactLink href="mailto:simplychoc@gmail.com">simplychoc@gmail.com</ContactLink>
+                <ContactLink href="tel:+380884439426">+380 (88) 443-94-26</ContactLink>
+                <ContactLink href="mailto:chocs1048@gmail.com">chocs1048@gmail.com</ContactLink>
             </Contact>
         </ContactBox>
     )

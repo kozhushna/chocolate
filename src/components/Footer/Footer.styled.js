@@ -2,16 +2,16 @@ import styled from '@emotion/styled';
 
 export const Section = styled.section`
     background-color: ${props => props.theme.colors.darkBackground};
-    padding: 32px 20px;
+    padding: 32px 0;
 
     @media screen and (${props => props.theme.devices.tablet}){
-      padding: 50px 20px;
+      padding: 50px 0;
     }
 `;
 
 export const Wrapper = styled.div`
     
-    border-bottom: 1px solid ${props => props.theme.colors.white};
+    border-bottom: 1px solid ${props => props.theme.colors.lightBorder};
 
     @media screen and (${props => props.theme.devices.tablet}){
         display: flex;
