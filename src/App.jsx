@@ -10,6 +10,7 @@ import { useModal } from 'hooks/useModal';
 import { FormOderBuy } from 'components/OderBuy/OderBuy';
 import { OurProducts } from 'components/OurProducts/OurProducts';
 import { Header } from 'components/Header/Header';
+import { TopSellers } from 'components/TopSellers/TopSellers';
 
 function App() {
   const { isModalOpen, openModal, closeModal } = useModal(); // test button 'Buy now' and modal, delete
@@ -25,6 +26,7 @@ function App() {
         </Section>
         <HowItsMade />
         <OurProducts />
+        <TopSellers />
         <Comments />
         <Subscribe />
         {/* test start */}
