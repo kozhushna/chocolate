@@ -3,12 +3,14 @@ import HowItsMade from './components/HowItsMade/HowItsMade';
 import { Comments } from 'components/Comments/Comments';
 import { Subscribe } from 'components/SubscribeSection/Subscribe';
 import TasteSensation from 'components/TasteSensation/TasteSensation';
+import {Footer} from 'components/Footer/Footer';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import { Modal } from 'components/Modal/Modal';
 import { useModal } from 'hooks/useModal';
 import { FormOderBuy } from 'components/OderBuy/OderBuy';
 import { OurProducts } from 'components/OurProducts/OurProducts';
 import { Header } from 'components/Header/Header';
+
 
 function App() {
   const { isModalOpen, openModal, closeModal } = useModal(); // test button 'Buy now' and modal, delete
@@ -40,6 +42,7 @@ function App() {
           //test finish - button 'Buy now' and modal, delete
         )}
       </main>
+    <Footer />
     </>
   );
 }
