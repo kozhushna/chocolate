@@ -21,15 +21,10 @@ function App() {
       <main>
         <Section>
           <Container>
-            <p>Hello BITE</p>
             <TasteSensation />
           </Container>
         </Section>
-        <Section id="made">
-          <Container>
-            <HowItsMade />
-          </Container>
-        </Section>
+        <HowItsMade />
         <OurProducts />
         <TopSellers />
         <Comments />

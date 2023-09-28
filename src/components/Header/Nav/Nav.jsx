@@ -41,7 +41,7 @@ export const Nav = ({ children, isOpen, onClick }) => {
             <Anchor href="#made">Top sellers</Anchor>
           </AnchorListItem>
           <AnchorListItem>
-            <Anchor href="#made">Chocolate is loved</Anchor>
+            <Anchor href="#comments">Chocolate is loved</Anchor>
           </AnchorListItem>
         </AnchorsList>
         {children}

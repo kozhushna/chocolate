@@ -31,3 +31,9 @@ export const Container = styled.div`
     width: ${props => props.theme.sizes.desktop}px;
   }
 `;
+
+export const SectionAhchor = styled.div`
+  margin-top: -5em;
+  height: 5em;
+  margin-bottom: 0em;
+`;

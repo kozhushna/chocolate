@@ -41,6 +41,7 @@ export const GlobalStyles = css`
   }
 
   body {
+    padding-top: 80px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
