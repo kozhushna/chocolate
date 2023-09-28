@@ -34,37 +34,37 @@ export const TopSellers = () => {
         <PictureBox>
           <picture>
             <source
-              srcSet={`${img_01_mobile}, 1x, ${img_01_mobile2}, 2x`}
+              srcSet={`${img_01_mobile} 1x, ${img_01_mobile2} 2x`}
               media={`(max-width: 767px)`}
             />
             <source
-              srcSet={`${img_01_tablet}, 1x, ${img_01_tablet2}, 2x`}
+              srcSet={`${img_01_tablet} 1x, ${img_01_tablet2} 2x`}
               media={`(max-width: 1199px)`}
             />
             <source
-              srcSet={`${img_01_desktop}, 1x, ${img_01_desktop2}, 2x`}
+              srcSet={`${img_01_desktop} 1x, ${img_01_desktop2} 2x`}
               media={`(min-width: 1200px)`}
             />
             <ImgStyled src={img_01_mobile} />
           </picture>
           <picture>
             <source
-              srcSet={`${img_02_mobile}, 1x, ${img_02_mobile2}, 2x`}
+              srcSet={`${img_02_mobile} 1x, ${img_02_mobile2} 2x`}
               media={`(max-width: 767px)`}
             />
             <source
-              srcSet={`${img_02_tablet}, 1x, ${img_02_tablet2}, 2x`}
+              srcSet={`${img_02_tablet} 1x, ${img_02_tablet2} 2x`}
               media={`(max-width: 1199px)`}
             />
             <source
-              srcSet={`${img_02_desktop}, 1x, ${img_02_desktop2}, 2x`}
+              srcSet={`${img_02_desktop} 1x, ${img_02_desktop2} 2x`}
               media={`(min-width: 1200px)`}
             />
             <ImgStyled src={img_01_mobile} />
           </picture>
           <PictureOnlyDesktop>
             <source
-              srcSet={`${img_03_desktop}, 1x, ${img_03_desktop2}, 2x`}
+              srcSet={`${img_03_desktop} 1x, ${img_03_desktop2} 2x`}
               media={`(min-width: 1200px)`}
             />
             <ImgStyled src={img_01_mobile} />
