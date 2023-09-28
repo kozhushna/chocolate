@@ -24,9 +24,11 @@ export const ImgStyled = styled.img`
 `;
 
 export const TopSallersFooter = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media screen and (${props => props.theme.devices.tablet}) {
-    display: flex;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
   }
@@ -36,6 +38,7 @@ export const Description = styled.p`
   width: 306px;
   text-align: left;
   @media screen and (${props => props.theme.devices.onlymobile}) {
+    margin-right: 29px;
     margin-bottom: 20px;
   }
   @media screen and (${props => props.theme.devices.desktop}) {

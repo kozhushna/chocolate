@@ -20,7 +20,14 @@ export const ContainerStyled = styled(Container)`
 
 export const BurgerMenu = styled.button`
   display: flex;
+  & > svg {
+    transition: fill ${props => props.theme.baseTransition};
+  }
   @media screen and (${theme.devices.desktop}) {
     display: none;
+  }
+  &:hover > svg,
+  &:focus > svg {
+    fill: ${props => props.theme.colors.accent};
   }
 `;
