@@ -1,4 +1,4 @@
-import { Section, Container } from 'App.styled';
+import { Section, Container, SectionAhchor } from 'App.styled';
 import {
   ProductsTitle,
   TitleAccent,
@@ -10,7 +10,8 @@ import { ProductSlider } from './components/ProductSlider/ProductSlider';
 
 export const OurProducts = () => {
   return (
-    <Section id="products">
+    <Section>
+      <SectionAhchor id="products" />
       <Container>
         <ProductsTitle>
           Our <TitleAccent>products</TitleAccent>
