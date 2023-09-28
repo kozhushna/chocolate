@@ -4,6 +4,9 @@ export const Elements = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
   @media screen and (min-width: 1200px) {
     flex-direction: row;
   }
@@ -80,16 +83,31 @@ export const CoverImage = styled.div`
   height: 500px;
   background-repeat: no-repeat;
   background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/MobilCover.jpg');
+  
+  @media screen and (min-resolution: 1.5dppx) {
+      background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/MobilCover@2x.jpg');
+    }
   @media screen and (min-width: 768px) {
     width: 614px;
     height: 400px;
-    background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/Cover.jpg');
+    background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/CoverTable.jpg');
+       
+    @media screen and (min-resolution: 1.5dppx) {
+      background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/CoverTable@2x.jpg');
+    }
   }
+
   @media screen and (min-width: 1200px) {
     width: 600px;
     height: 400px;
+    background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/Cover.jpg');
+        
+    @media screen and (min-resolution: 1.5dppx) {
+      background-image: url('https://res.cloudinary.com/dt8h4kxqx/image/upload/v1695714737/chocolate/Cover@2x.jpg');
+    }
   }
 `;
+
 
 export const PlayButton = styled.button`
   position: absolute;
