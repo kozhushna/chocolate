@@ -1,11 +1,25 @@
 {
   "files": {
     "main.css": "/chocolate/static/css/main.f81ba78a.css",
-    "main.js": "/chocolate/static/js/main.af48406e.js",
+    "main.js": "/chocolate/static/js/main.26d993e7.js",
     "static/js/787.c899bc57.chunk.js": "/chocolate/static/js/787.c899bc57.chunk.js",
+    "static/media/desktop_img_02_@2x.jpg": "/chocolate/static/media/desktop_img_02_@2x.c9c6990f31ba37a1e7fd.jpg",
+    "static/media/tablet_img_02_@2x.jpg": "/chocolate/static/media/tablet_img_02_@2x.ac90d518eabbd78da89e.jpg",
+    "static/media/mobile_img_02_@2x.jpg": "/chocolate/static/media/mobile_img_02_@2x.370e2c1de200b28bf997.jpg",
+    "static/media/desktop_img_01_@2x.jpg": "/chocolate/static/media/desktop_img_01_@2x.b40105d2627294f41098.jpg",
+    "static/media/desktop_img_03_@2x.jpg": "/chocolate/static/media/desktop_img_03_@2x.ae60dca3c1cc1b0d3e21.jpg",
+    "static/media/tablet_img_01_@2x.jpg": "/chocolate/static/media/tablet_img_01_@2x.87c6c08099e72dacc0b1.jpg",
+    "static/media/mobile_img_01_@2x.jpg": "/chocolate/static/media/mobile_img_01_@2x.f3e3ba7d8ff3a99167a2.jpg",
     "static/media/Montserrat-Bold.ttf": "/chocolate/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/chocolate/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
     "static/media/Montserrat-Regular.ttf": "/chocolate/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/desktop_img_02_@1x.jpg": "/chocolate/static/media/desktop_img_02_@1x.0d9f35c4adbbb6c0ce5b.jpg",
+    "static/media/tablet_img_02_@1x.jpg": "/chocolate/static/media/tablet_img_02_@1x.5779c32709453eb7fecb.jpg",
+    "static/media/mobile_img_02_@1x.jpg": "/chocolate/static/media/mobile_img_02_@1x.022f46ad0caf00acc433.jpg",
+    "static/media/desktop_img_01_@1x.jpg": "/chocolate/static/media/desktop_img_01_@1x.939cea7fb4408f0e3c22.jpg",
+    "static/media/desktop_img_03_@1x.jpg": "/chocolate/static/media/desktop_img_03_@1x.e14edc33c02dff14bfbe.jpg",
+    "static/media/tablet_img_01_@1x.jpg": "/chocolate/static/media/tablet_img_01_@1x.7f6df4da38b7dce19c18.jpg",
+    "static/media/mobile_img_01_@1x.jpg": "/chocolate/static/media/mobile_img_01_@1x.ec3088a3711876c6a1df.jpg",
     "static/media/subcribe-desktop@2x.jpg": "/chocolate/static/media/subcribe-desktop@2x.1982779c5d9a0bc97886.jpg",
     "static/media/subcribe-tablet@2x.jpg": "/chocolate/static/media/subcribe-tablet@2x.3a94bc9f98d2f6d9b9c9.jpg",
     "static/media/Desktop_second_chocolate.png": "/chocolate/static/media/Desktop_second_chocolate.05d24c8088ecb5095f63.png",
@@ -27,11 +41,11 @@
     "static/media/subcribe-mobile.jpg": "/chocolate/static/media/subcribe-mobile.0731e2a25b08f2265ab1.jpg",
     "index.html": "/chocolate/index.html",
     "main.f81ba78a.css.map": "/chocolate/static/css/main.f81ba78a.css.map",
-    "main.af48406e.js.map": "/chocolate/static/js/main.af48406e.js.map",
+    "main.26d993e7.js.map": "/chocolate/static/js/main.26d993e7.js.map",
     "787.c899bc57.chunk.js.map": "/chocolate/static/js/787.c899bc57.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f81ba78a.css",
-    "static/js/main.af48406e.js"
+    "static/js/main.26d993e7.js"
   ]
 }
