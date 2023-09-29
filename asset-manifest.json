@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chocolate/static/css/main.f81ba78a.css",
-    "main.js": "/chocolate/static/js/main.26d993e7.js",
+    "main.js": "/chocolate/static/js/main.cecf5b8c.js",
     "static/js/787.c899bc57.chunk.js": "/chocolate/static/js/787.c899bc57.chunk.js",
     "static/media/desktop_img_02_@2x.jpg": "/chocolate/static/media/desktop_img_02_@2x.c9c6990f31ba37a1e7fd.jpg",
     "static/media/tablet_img_02_@2x.jpg": "/chocolate/static/media/tablet_img_02_@2x.ac90d518eabbd78da89e.jpg",
@@ -24,10 +24,15 @@
     "static/media/subcribe-tablet@2x.jpg": "/chocolate/static/media/subcribe-tablet@2x.3a94bc9f98d2f6d9b9c9.jpg",
     "static/media/Desktop_second_chocolate.png": "/chocolate/static/media/Desktop_second_chocolate.05d24c8088ecb5095f63.png",
     "static/media/Desktop_chocolate.png": "/chocolate/static/media/Desktop_chocolate.eceb927107b3e31589b4.png",
+    "static/media/avatar_06_@2x.jpg": "/chocolate/static/media/avatar_06_@2x.09a10a2f920fd381de79.jpg",
     "static/media/subcribe-mobile@2x.jpg": "/chocolate/static/media/subcribe-mobile@2x.d0b3319e3c19f82a872f.jpg",
     "static/media/Desktop_nuts.png": "/chocolate/static/media/Desktop_nuts.3a61fe3937f8ee4e8c30.png",
     "static/media/subcribe-desktop.jpg": "/chocolate/static/media/subcribe-desktop.7b6305a54c3b8f4df808.jpg",
+    "static/media/avatar_04_@2x.jpg": "/chocolate/static/media/avatar_04_@2x.58e9017816b9c9d245cd.jpg",
     "static/media/avatar_06_@1x.jpg": "/chocolate/static/media/avatar_06_@1x.72bfdf2c311079794b38.jpg",
+    "static/media/avatar_08_@2x.jpg": "/chocolate/static/media/avatar_08_@2x.aaff1a2f36b38a352535.jpg",
+    "static/media/avatar_03_@2x.jpg": "/chocolate/static/media/avatar_03_@2x.02940b0aa02f3f65464d.jpg",
+    "static/media/avatar_01_@2x.jpg": "/chocolate/static/media/avatar_01_@2x.0c172d6d4ac9e16f0364.jpg",
     "static/media/roasted@2x.jpg": "/chocolate/static/media/roasted@2x.d0763cf540d93b2bb59a.jpg",
     "static/media/subcribe-tablet.jpg": "/chocolate/static/media/subcribe-tablet.9b8c42f6d49c19a9f6b4.jpg",
     "static/media/apple@2x.jpg": "/chocolate/static/media/apple@2x.46498da39635ec93bf7d.jpg",
@@ -36,16 +41,18 @@
     "static/media/pineapple@2x.jpg": "/chocolate/static/media/pineapple@2x.f1b05fa4228d2038b41e.jpg",
     "static/media/lime@2x.jpg": "/chocolate/static/media/lime@2x.59a8df61461072daccf2.jpg",
     "static/media/orange@2x.jpg": "/chocolate/static/media/orange@2x.8f0612cf2515337c632e.jpg",
+    "static/media/avatar_02_@2x.jpg": "/chocolate/static/media/avatar_02_@2x.7684e5f62b35c9e0164d.jpg",
+    "static/media/avatar_07_@2x.jpg": "/chocolate/static/media/avatar_07_@2x.75a53e2185f6452a59f9.jpg",
     "static/media/honey@2x.jpg": "/chocolate/static/media/honey@2x.9f1ea3cd94d285777cd5.jpg",
     "static/media/sprite.svg": "/chocolate/static/media/sprite.6c00c9eff5427dafa5cf1bb9751b6849.svg",
     "static/media/subcribe-mobile.jpg": "/chocolate/static/media/subcribe-mobile.0731e2a25b08f2265ab1.jpg",
     "index.html": "/chocolate/index.html",
     "main.f81ba78a.css.map": "/chocolate/static/css/main.f81ba78a.css.map",
-    "main.26d993e7.js.map": "/chocolate/static/js/main.26d993e7.js.map",
+    "main.cecf5b8c.js.map": "/chocolate/static/js/main.cecf5b8c.js.map",
     "787.c899bc57.chunk.js.map": "/chocolate/static/js/787.c899bc57.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f81ba78a.css",
-    "static/js/main.26d993e7.js"
+    "static/js/main.cecf5b8c.js"
   ]
 }
