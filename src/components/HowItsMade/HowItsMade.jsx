@@ -1,12 +1,11 @@
 import React from 'react';
-import { Title, Box, Accent } from './HowItsMade.stuled';
+import { Box } from './HowItsMade.stuled';
 import HowItsMadeElements from './components/HowItsMadeElements';
-import { Container, Section, SectionAhchor } from 'App.styled';
+import { Accent, Container, Section, Title } from 'App.styled';
 
 const HowItsMade = () => {
   return (
-    <Section>
-      <SectionAhchor id="made" />
+    <Section id="made">
       <Container>
         <Box>
           <Title>

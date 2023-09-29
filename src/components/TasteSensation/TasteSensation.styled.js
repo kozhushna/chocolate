@@ -13,18 +13,6 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h2`
-  color: #111;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px;
-  letter-spacing: -0.72px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-`;
 export const SubTitle = styled.p`
   color: #111;
   text-align: center;
@@ -34,8 +22,4 @@ export const SubTitle = styled.p`
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.28px;
-`;
-
-export const Accent = styled.span`
-  color: #fd9222;
 `;
