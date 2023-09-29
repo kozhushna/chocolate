@@ -20,10 +20,10 @@ export const ModalContent = styled.div`
   background: ${theme.colors.mainBackground};
   transform: translate(-50%, -50%);
   border-radius: 15px;
-  padding: 32px 24px 32px 24px;
+  padding: 32px 24px;
   width: 311px;
   @media screen and (${theme.devices.tablet}) {
     width: 538px;
-    padding: 32px 24px 32px 24px;
+    padding: 40px;
   }
 `;
