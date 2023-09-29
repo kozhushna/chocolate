@@ -1,21 +1,15 @@
-import { Section, Container, SectionAhchor } from 'App.styled';
-import {
-  ProductsTitle,
-  TitleAccent,
-  PaginationBox,
-  SliderContainer,
-} from './OurProducts.styled';
+import { Section, Container, Title, Accent } from 'App.styled';
+import { PaginationBox, SliderContainer } from './OurProducts.styled';
 
 import { ProductSlider } from './components/ProductSlider/ProductSlider';
 
 export const OurProducts = () => {
   return (
-    <Section>
-      <SectionAhchor id="products" />
+    <Section id="products">
       <Container>
-        <ProductsTitle>
-          Our <TitleAccent>products</TitleAccent>
-        </ProductsTitle>
+        <Title>
+          Our <Accent>products</Accent>
+        </Title>
       </Container>
       <SliderContainer>
         <ProductSlider />
