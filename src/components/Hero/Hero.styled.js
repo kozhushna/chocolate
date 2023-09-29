@@ -11,18 +11,25 @@ import desktopBackground2x from '../../images/Hero/hero-desktop@2x.jpg';
 export const HeroSection = styled.section`
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 72px;
 
-  &[id] {
-    &::before {
-      content: '';
-      display: block;
-      height: 62px;
-      margin-top: -62px;
-      @media screen and (${props => props.theme.devices.tablet}) {
-        height: 80px;
-        margin-top: -80px;
-      }
+  &::before {
+    content: '';
+    display: block;
+    height: 62px;
+    margin-top: -62px;
+    @media screen and (${props => props.theme.devices.tablet}) {
+      height: 80px;
+      margin-top: -80px;
     }
+  }
+
+  @media screen and (${props => props.theme.devices.tablet}) {
+    padding-bottom: 50px;
+  }
+
+  @media screen and (${props => props.theme.devices.desktop}) {
+    padding-bottom: 72px;
   }
 `;
 
@@ -120,39 +127,19 @@ export const Link = styled.a`
     padding: 14px 40px;
   }
 `;
-// export const BackgroundHolder = styled.div
 
-//   width: 100%;
-//   min-height: 600px;
-//   background-image: url(${mobileBackground});
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   background-position: center;
-//   border-radius: 50px;
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-left: 20px;
 
-//   @media screen and (${props => props.theme.devices.retina}),
-//     (min-resolution: 192dpi),
-//     (min-resolution: 2dppx) {
-//     background-image: url(${mobileBackground2x});
-//   }
+  @media screen and (${theme.devices.tablet}) {
+    margin-left: 40px;
+  }
+`;
 
-//   @media screen and (${props => props.theme.devices.tablet}) {
-//     background-image: url(${tabletBackground});
-
-//     @media screen and (${props => props.theme.devices.retina}),
-//       (min-resolution: 192dpi),
-//       (min-resolution: 2dppx) {
-//       background-image: url(${tabletBackground2x});
-//     }
-//   }
-
-//   @media screen and (${props => props.theme.devices.desktop}) {
-//     background-image: url(${desktopBackground});
-
-//     @media screen and (${props => props.theme.devices.retina}),
-//       (min-resolution: 192dpi),
-//       (min-resolution: 2dppx) {
-//       background-image: url(${desktopBackground2x});
-//     }
-//   }
-// `;
+export const ButtonLinkWrapper = styled.div`
+  display: flex;
+  gap: 14px;
+`;
