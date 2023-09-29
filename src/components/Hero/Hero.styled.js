@@ -30,7 +30,6 @@ export const BackgroundWrapper = styled.div`
   padding-top: 395px;
   padding-bottom: 28px;
   margin: 0 auto;
-  text-align: center;
 
   background-color: ${props => props.theme.colors.darkBackground};
   background-image: linear-gradient(${theme.linerGradient}),
@@ -97,7 +96,30 @@ export const Title = styled.h1`
   }
 `;
 
-export const Link = styled.a``;
+export const Link = styled.a`
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid;
+  border-color: ${theme.colors.white};
+  border-radius: 100px;
+  color: ${theme.colors.white};
+  background: ${theme.colors.darkBackground};
+  transition: color ${theme.baseTransition}, background ${theme.baseTransition},
+    border-color ${theme.baseTransition};
+
+  &:hover,
+  &:focus {
+    background: ${theme.colors.white};
+    color: ${theme.colors.accent};
+    border-color: ${theme.colors.accent};
+  }
+
+  @media screen and (${theme.devices.tablet}) {
+    padding: 14px 40px;
+  }
+`;
 // export const BackgroundHolder = styled.div
 
 //   width: 100%;

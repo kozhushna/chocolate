@@ -3,7 +3,7 @@ import { useModal } from 'hooks/useModal';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import { Modal } from 'components/Modal/Modal';
 import { FormOderBuy } from 'components/OderBuy/OderBuy';
-import { BackgroundWrapper, HeroSection, Title } from './Hero.styled';
+import { BackgroundWrapper, HeroSection, Title, Link } from './Hero.styled';
 
 export const Hero = () => {
   const { isModalOpen, openModal, closeModal } = useModal(); // test button 'Buy now' and modal, delete
@@ -17,6 +17,7 @@ export const Hero = () => {
               moment of pure delight!
             </Title>
             <ButtonBgOrange action={openModal} />
+            <Link href="#made">How it’s made</Link>
           </BackgroundWrapper>
         </Container>
       </HeroSection>
