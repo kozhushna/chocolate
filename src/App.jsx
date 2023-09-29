@@ -7,12 +7,14 @@ import { Footer } from 'components/Footer/Footer';
 import { OurProducts } from 'components/OurProducts/OurProducts';
 import { Header } from 'components/Header/Header';
 import { TopSellers } from 'components/TopSellers/TopSellers';
+import { Hero } from 'components/Hero/Hero';
 
 function App() {
   return (
     <>
       <Header />
       <main>
+        <Hero />
         <Section>
           <Container>
             <TasteSensation />

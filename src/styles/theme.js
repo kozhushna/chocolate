@@ -28,5 +28,7 @@ export const theme = Object.freeze({
     desktop: `min-width: ${sizes.desktop}px`,
     retina: 'min-device-pixel-ratio: 2',
   },
+
   baseTransition: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
+  linerGradient: '180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%',
 });

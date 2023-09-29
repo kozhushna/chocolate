@@ -29,7 +29,7 @@ export const Nav = ({ children, isOpen, onClick }) => {
         </CloseBtn>
         <AnchorsList>
           <AnchorListItem>
-            <Anchor href="#made">Home</Anchor>
+            <Anchor href="#home">Home</Anchor>
           </AnchorListItem>
           <AnchorListItem>
             <Anchor href="#made">How it’s made?</Anchor>

@@ -84,7 +84,7 @@ export const TopSellers = () => {
           </TopSallersFooter>
         </Container>
       </Section>
-      <ButtonBgOrange action={openModal} />
+      {/* <ButtonBgOrange action={openModal} /> */}
       {isModalOpen && (
         <Modal onClose={closeModal}>
           <FormOderBuy action={closeModal} />
