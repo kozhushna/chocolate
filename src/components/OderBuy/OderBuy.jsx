@@ -12,7 +12,7 @@ import {
 } from './OderBuy.styled';
 // import { computeHeadingLevel } from '@testing-library/react';
 // import { ClassNames } from '@emotion/react';
-import { StyledButton } from 'components/ButtonBgOrange/ButtonBgOrange';
+import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 
 export const FormOderBuy = ({ action }) => {
   const { register, handleSubmit } = useForm();
@@ -50,7 +50,7 @@ export const FormOderBuy = ({ action }) => {
           <StyledTextarea {...register('comment')} placeholder="Enter text" />
         </Wrapper>
         {/* <p>{data}</p> */}
-        <StyledButton title="Submit" />
+        <ButtonBgOrange title="Submit" />
       </StyledForm>
     </StyledDiv>
   );

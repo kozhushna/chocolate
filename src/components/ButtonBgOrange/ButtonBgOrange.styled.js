@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { theme } from 'styles';
 
 export const Button = styled.button`
   display: flex;
@@ -12,16 +11,18 @@ export const Button = styled.button`
   line-height: normal;
   border-radius: 100px;
 
-  color: ${theme.colors.white};
-  background: ${theme.colors.accent};
-  transition: color ${theme.baseTransition}, background ${theme.baseTransition};
+  color: ${props => props.theme.colors.white};
+  background: ${props => props.theme.colors.accent};
+  transition: color ${props => props.theme.baseTransition},
+    background ${props => props.theme.baseTransition};
+
   &:hover,
   &:focus {
-    background: ${theme.colors.buttonHover};
-    color: ${theme.colors.accent};
+    background: ${props => props.theme.colors.buttonHover};
+    color: ${props => props.theme.colors.accent};
   }
 
-  @media screen and (${theme.devices.tablet}) {
+  @media screen and (${props => props.theme.devices.tablet}) {
     font-size: 18px;
     padding: 14px 40px;
   }
