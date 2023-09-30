@@ -6,7 +6,7 @@ export const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 14px;
   background-color: ${props => props.theme.colors.mainBackground};
