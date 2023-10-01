@@ -31,3 +31,7 @@ export const Container = styled.div`
     width: ${props => props.theme.sizes.desktop}px;
   }
 `;
+
+export const FeatureContainerStyled = styled.div`
+  background-color: ${props => props.theme.colors.darkBackground};
+`;

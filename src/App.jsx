@@ -1,4 +1,4 @@
-import { Section, Container } from 'App.styled';
+import { Section, Container,FeatureContainerStyled } from 'App.styled';
 import HowItsMade from './components/HowItsMade/HowItsMade';
 import { Comments } from 'components/Comments/Comments';
 import TasteSensation from 'components/TasteSensation/TasteSensation';
@@ -7,17 +7,26 @@ import { Modal } from 'components/Modal/Modal';
 import { useModal } from 'hooks/useModal';
 import { FormOderBuy } from 'components/OderBuy/OderBuy';
 import { OurProducts } from 'components/OurProducts/OurProducts';
+import Features from 'components/Features/Features';
+
 
 function App() {
   const { isModalOpen, openModal, closeModal } = useModal(); // test button 'Buy now' and modal, delete
 
   return (
     <main>
+      
       <Section>
         <Container>
-          <p>Hello BITE</p>
           <TasteSensation />
         </Container>
+      </Section>
+      <Section>
+        <FeatureContainerStyled>
+        <Container>
+            <Features />
+          </Container>
+          </FeatureContainerStyled>
       </Section>
       <Section>
         <Container>
