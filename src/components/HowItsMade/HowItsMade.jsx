@@ -1,16 +1,21 @@
 import React from 'react';
-import { Title, Box, Accent } from './HowItsMade.stuled';
-import  HowItsMadeElements  from './components/HowItsMadeElements';
+import { Box } from './HowItsMade.stuled';
+import HowItsMadeElements from './components/HowItsMadeElements';
+import { Accent, Container, Section, Title } from 'App.styled';
 
 const HowItsMade = () => {
   return (
-    <Box>
-      <Title>how it’s <Accent>made?</Accent></Title>
-      <HowItsMadeElements/>
-    </Box>
+    <Section id="made">
+      <Container>
+        <Box>
+          <Title>
+            how it’s <Accent>made?</Accent>
+          </Title>
+          <HowItsMadeElements />
+        </Box>
+      </Container>
+    </Section>
   );
 };
-
-
 
 export default HowItsMade;

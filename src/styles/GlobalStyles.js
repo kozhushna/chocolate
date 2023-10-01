@@ -38,17 +38,17 @@ export const GlobalStyles = css`
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    width: 100vw;
   }
 
   body {
-    width: 100vw;
+    padding-top: 80px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
     font-style: normal;
     font-size: 14px;
-    line-height: 1.285714;
+    line-height: 1.285717;
+    background-color: ${theme.colors.mainBackground};
     color: ${theme.colors.primaryText};
   }
 
