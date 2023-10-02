@@ -44,6 +44,10 @@ export const Container = styled.div`
   }
 `;
 
+export const FeatureContainerStyled = styled.div`
+  background-color: ${props => props.theme.colors.darkBackground};
+`;
+
 export const SectionAhchor = styled.div`
   margin-top: -5em;
   height: 5em;
