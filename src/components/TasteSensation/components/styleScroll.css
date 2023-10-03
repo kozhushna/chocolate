@@ -1,15 +1,23 @@
 .custom_scroll_element {
-    max-height: 140px;
+    max-height: 160px;
     overflow: auto;
+    margin-top: 15px;
+
+}
+
+.container:last-child .custom_scroll_element {
+    max-height: 10px;
 }
 
 .custom_scroll_element::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+    
 }
 
 .custom_scroll_element::-webkit-scrollbar-track {
     background-color: #f1f1f1;
     border-radius: 10px;
+    margin-top: 18px;
 
 }
 
