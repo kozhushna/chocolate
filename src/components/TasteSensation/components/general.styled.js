@@ -58,7 +58,6 @@ export const CardOverlay = styled.div`
   left: 0;
   width: 100%;
   height: ${props => (props.isHovered ? '100%' : '0')};
-  transform: translateY(${props => (props.isHovered ? '0' : '100%')});
   overflow: hidden;
   z-index: 1;
   border: 1px solid black;
@@ -87,40 +86,6 @@ export const InfoTitle = styled.p`
   font-weight: 600;
   letter-spacing: -0.54px;
   text-align: left;
-`;
-
-export const LabelContainer = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const InfoLabelName = styled.p`
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 12px;
-  border: 2px solid #fd9222;
-  border-radius: 35px;
-  background-color: #fd9222;
-  padding: 6px 16px;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  margin-top: 8px;
-  margin-right: 6px;
-`;
-
-export const InfoLabelBenefits = styled.p`
-  color: #111;
-  font-family: Montserrat;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 12px;
-  border: 1px solid #fd9222;
-  border-radius: 35px;
-  padding: 6px 16px;
-  margin-top: 8px;
 `;
 
 export const InfoText = styled.p`
