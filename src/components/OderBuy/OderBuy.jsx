@@ -1,5 +1,7 @@
 // import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
 import {
   StyledDiv,
@@ -13,8 +15,10 @@ import {
 // import { computeHeadingLevel } from '@testing-library/react';
 // import { ClassNames } from '@emotion/react';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
+import { useState } from 'react';
 
 export const FormOderBuy = ({ action }) => {
+  const [value, setValue] = useState();
   const { register, handleSubmit } = useForm();
   // const [data, setData] = useState('');
 
@@ -39,6 +43,13 @@ export const FormOderBuy = ({ action }) => {
         </Wrapper>
         <Wrapper>
           <StyledLabel htmlFor="phone">Phone number</StyledLabel>
+          <PhoneInput
+            {...register('phone')}
+            defaultCountry="US"
+            placeholder="Phone number"
+            value={value}
+            onChange={setValue}
+          />
           <StyledInput {...register('phone')} placeholder="Phone number" />
         </Wrapper>
         <Wrapper>
