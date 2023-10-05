@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chocolate/static/css/main.d518e9c0.css",
-    "main.js": "/chocolate/static/js/main.50db162d.js",
+    "main.js": "/chocolate/static/js/main.6239050c.js",
     "static/js/787.c899bc57.chunk.js": "/chocolate/static/js/787.c899bc57.chunk.js",
     "static/media/hero-desktop@2x.jpg": "/chocolate/static/media/hero-desktop@2x.1be0ef1972f033a51127.jpg",
     "static/media/hero-tablet@2x.jpg": "/chocolate/static/media/hero-tablet@2x.2af1da57c18016c20c22.jpg",
@@ -28,10 +28,12 @@
     "static/media/subcribe-desktop@2x.jpg": "/chocolate/static/media/subcribe-desktop@2x.1982779c5d9a0bc97886.jpg",
     "static/media/hero-mobile.jpg": "/chocolate/static/media/hero-mobile.7ae889cf95a40d206f0b.jpg",
     "static/media/subcribe-tablet@2x.jpg": "/chocolate/static/media/subcribe-tablet@2x.3a94bc9f98d2f6d9b9c9.jpg",
+    "static/media/subscribe-form-tablet-desktop@2x.jpg": "/chocolate/static/media/subscribe-form-tablet-desktop@2x.f157cb3daf47a364bd4d.jpg",
     "static/media/Desktop_second_chocolate.png": "/chocolate/static/media/Desktop_second_chocolate.05d24c8088ecb5095f63.png",
     "static/media/Desktop_chocolate.png": "/chocolate/static/media/Desktop_chocolate.eceb927107b3e31589b4.png",
     "static/media/avatar_06_@2x.jpg": "/chocolate/static/media/avatar_06_@2x.09a10a2f920fd381de79.jpg",
     "static/media/subcribe-mobile@2x.jpg": "/chocolate/static/media/subcribe-mobile@2x.d0b3319e3c19f82a872f.jpg",
+    "static/media/subscribe-form-mobile@2x.jpg": "/chocolate/static/media/subscribe-form-mobile@2x.bbc5a22538b96b52af34.jpg",
     "static/media/Desktop_nuts.png": "/chocolate/static/media/Desktop_nuts.3a61fe3937f8ee4e8c30.png",
     "static/media/subcribe-desktop.jpg": "/chocolate/static/media/subcribe-desktop.7b6305a54c3b8f4df808.jpg",
     "static/media/avatar_04_@2x.jpg": "/chocolate/static/media/avatar_04_@2x.58e9017816b9c9d245cd.jpg",
@@ -45,6 +47,7 @@
     "static/media/classic-milk@2x.jpg": "/chocolate/static/media/classic-milk@2x.9878bd7d750bc6ff7a37.jpg",
     "static/media/classic-white@2x.jpg": "/chocolate/static/media/classic-white@2x.5c3892a2cec00529c849.jpg",
     "static/media/pineapple@2x.jpg": "/chocolate/static/media/pineapple@2x.f1b05fa4228d2038b41e.jpg",
+    "static/media/subscribe-form-tablet-desktop.jpg": "/chocolate/static/media/subscribe-form-tablet-desktop.a247ab936d87b23e90c5.jpg",
     "static/media/lime@2x.jpg": "/chocolate/static/media/lime@2x.59a8df61461072daccf2.jpg",
     "static/media/orange@2x.jpg": "/chocolate/static/media/orange@2x.8f0612cf2515337c632e.jpg",
     "static/media/avatar_02_@2x.jpg": "/chocolate/static/media/avatar_02_@2x.7684e5f62b35c9e0164d.jpg",
@@ -52,16 +55,17 @@
     "static/media/honey@2x.jpg": "/chocolate/static/media/honey@2x.9f1ea3cd94d285777cd5.jpg",
     "static/media/sprite.svg": "/chocolate/static/media/sprite.6c00c9eff5427dafa5cf1bb9751b6849.svg",
     "static/media/subcribe-mobile.jpg": "/chocolate/static/media/subcribe-mobile.0731e2a25b08f2265ab1.jpg",
+    "static/media/subscribe-form-mobile.jpg": "/chocolate/static/media/subscribe-form-mobile.65b6950bab8a174a8f7a.jpg",
     "static/media/chocolateIcon.svg": "/chocolate/static/media/chocolateIcon.dc9a54723638fa6039fca3b1de421207.svg",
     "static/media/Coin.svg": "/chocolate/static/media/Coin.9aa2a860978e0c7bf18a1b0d5b6393e8.svg",
     "index.html": "/chocolate/index.html",
     "static/media/spoon.svg": "/chocolate/static/media/spoon.9a7a1cd0eec0d47acf6533ccfac5344b.svg",
     "main.d518e9c0.css.map": "/chocolate/static/css/main.d518e9c0.css.map",
-    "main.50db162d.js.map": "/chocolate/static/js/main.50db162d.js.map",
+    "main.6239050c.js.map": "/chocolate/static/js/main.6239050c.js.map",
     "787.c899bc57.chunk.js.map": "/chocolate/static/js/787.c899bc57.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d518e9c0.css",
-    "static/js/main.50db162d.js"
+    "static/js/main.6239050c.js"
   ]
 }
