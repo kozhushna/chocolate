@@ -32,7 +32,7 @@ export const SubscribeFoprm = ({ action }) => {
             },
           })}
         />
-        {errors.email ? 'error' : 'no error'}
+
         {errors.email?.message && <p>{errors.email?.message}</p>}
         <ButtonBgOrange title="Submit" />
       </Form>
