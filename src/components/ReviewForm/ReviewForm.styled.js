@@ -50,6 +50,8 @@ export const ErrorMessage = styled.p`
 `;
 
 export const FormTitle = styled.p`
+  max-width: 255px;
+
   margin-bottom: 24px;
   font-size: 20px;
   font-style: normal;
@@ -60,6 +62,7 @@ export const FormTitle = styled.p`
   color: ${props => props.theme.colors.primaryText};
 
   @media screen and (${props => props.theme.devices.tablet}) {
+    max-width: 298px;
     margin-bottom: 28px;
   }
 `;
