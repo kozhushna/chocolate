@@ -1,4 +1,4 @@
-const sizes = {
+export const sizes = {
   onlymobile: '767',
   mobile: '375',
   tablet: '768',
@@ -19,6 +19,7 @@ export const theme = Object.freeze({
     buttonHover: '#FCF1E0',
     backdropActive: '#00000080',
     lightBorder: 'rgba(255, 255, 255, 0.10)',
+    inputBorder: 'rgba(17, 17, 17, 0.05)',
   },
   sizes: sizes,
 
@@ -32,4 +33,5 @@ export const theme = Object.freeze({
 
   baseTransition: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
   linerGradient: '180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%',
+  inputBoxShadow: '0px 5.44492px 5.44492px 0px rgba(0, 0, 0, 0.03)',
 });

@@ -22,7 +22,7 @@ export const Button = styled.button`
   }
 
   @media screen and (${theme.devices.tablet}) {
-    font-size: ${props => props.tabletFontSize ?? '18px'};
+    font-size: ${props => props.smallFontSize ?? '18px'};
     padding: 14px 40px;
   }
 `;

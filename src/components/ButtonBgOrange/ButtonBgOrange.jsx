@@ -4,14 +4,14 @@ export const ButtonBgOrange = ({
   type = 'submit',
   action,
   title = 'Buy now',
-  tabletFontSize,
+  smallFontSize,
 }) => {
   return (
     <Button
       type={type}
       onClick={action}
       title={title}
-      tabletFontSize={tabletFontSize}
+      smallFontSize={smallFontSize}
     >
       <p>{title}</p>
     </Button>
