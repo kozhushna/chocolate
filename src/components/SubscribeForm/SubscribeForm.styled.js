@@ -105,6 +105,7 @@ export const ContentWrapper = styled.div`
   position: relative;
   display: flex;
   gap: 8px;
+  margin-bottom: 8px;
 `;
 
 export const ButtonWrapper = styled.div`

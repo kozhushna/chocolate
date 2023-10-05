@@ -76,9 +76,6 @@ export const SubscribeFoprm = ({ action }) => {
             placeholder="Enter you email"
           />
 
-          {errors.email?.message && (
-            <ErrorMessage>{errors.email?.message}</ErrorMessage>
-          )}
           <ButtonWrapper>
             <ButtonBgOrange
               title={windowSize[0] > sizes.onlymobile ? 'Subscribe' : 'Submit'}
@@ -86,6 +83,9 @@ export const SubscribeFoprm = ({ action }) => {
             />
           </ButtonWrapper>
         </ContentWrapper>
+        {errors.email?.message && (
+          <ErrorMessage>{errors.email?.message}</ErrorMessage>
+        )}
       </Form>
     </FormHolder>
   );
