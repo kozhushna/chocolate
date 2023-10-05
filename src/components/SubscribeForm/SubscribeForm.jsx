@@ -2,10 +2,12 @@ import { useForm } from 'react-hook-form';
 import { useState, useEffect } from 'react';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
 import { sizes } from '../../styles/theme';
+import { theme } from 'styles';
 
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import {
   Accent,
+  BackgroundWrapper,
   ButtonWrapper,
   ContentWrapper,
   ErrorMessage,
@@ -40,7 +42,12 @@ export const SubscribeFoprm = ({ action }) => {
   }, []);
   return (
     <FormHolder>
-      <ButtonClose action={action} />
+      <BackgroundWrapper />
+      <ButtonClose
+        action={action}
+        fill={theme.colors.white}
+        hoverFill={theme.colors.accent}
+      />
       <Form
         onSubmit={handleSubmit(data => {
           console.log(data.email);

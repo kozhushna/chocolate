@@ -2,13 +2,52 @@ import styled from '@emotion/styled';
 import { ModalContent } from 'components/Modal/Modal.styled';
 import { theme } from 'styles';
 
+import mobileBackground from '../../images/SubscribeForm/subscribe-form-mobile.jpg';
+import mobileBackground2x from '../../images/SubscribeForm/subscribe-form-mobile@2x.jpg';
+import tabletDesktopBackground from '../../images/SubscribeForm/subscribe-form-tablet-desktop.jpg';
+import tabletDesktopBackground2x from '../../images/SubscribeForm/subscribe-form-tablet-desktop@2x.jpg';
+
 export const FormHolder = styled(ModalContent)`
   @media screen and (${theme.devices.tablet}) {
     width: 538px;
   }
 `;
 
-export const Form = styled.form``;
+export const Form = styled.form`
+  padding: 32px 24px;
+
+  @media screen and (${theme.devices.tablet}) {
+    padding: 40px;
+  }
+`;
+
+export const BackgroundWrapper = styled.div`
+  height: 169px;
+  background-color: ${props => props.theme.colors.darkBackground};
+  background-image: url(${mobileBackground});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+
+  @media screen and (${props => props.theme.devices.retina}),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${mobileBackground2x});
+  }
+
+  @media screen and (${props => props.theme.devices.tablet}) {
+    height: 196px;
+    background-image: url(${tabletDesktopBackground});
+
+    @media screen and (${props => props.theme.devices.retina}),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${tabletDesktopBackground2x});
+    }
+  }
+`;
 
 export const Input = styled.input`
   display: block;
