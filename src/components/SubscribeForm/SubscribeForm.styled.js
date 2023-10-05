@@ -22,3 +22,7 @@ export const Input = styled.input`
   padding: 22px;
   font-size: 18px;
 `;
+
+export const ErrorMessage = styled.p`
+  color: ${props => props.theme.colors.validationError};
+`;

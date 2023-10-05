@@ -11,6 +11,7 @@ export const theme = Object.freeze({
     darkBackground: '#1E1823',
     accent: '#FD9222',
     white: '#ffffff',
+    validationError: '#ed4337',
     light: 'rgba(17, 17, 17, 0.10)', //border and circles
     primaryText: '#111',
     darkText: 'rgba(17, 17, 17, 0.70)',

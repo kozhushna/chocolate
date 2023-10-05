@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
 
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
-import { Form, FormHolder, Input } from './SubscribeForm.styled';
+import { ErrorMessage, Form, FormHolder, Input } from './SubscribeForm.styled';
 
 export const SubscribeFoprm = ({ action }) => {
   const {
@@ -15,7 +15,8 @@ export const SubscribeFoprm = ({ action }) => {
       <ButtonClose action={action} />
       <Form
         onSubmit={handleSubmit(data => {
-          console.log(data);
+          console.log(data.email);
+          action();
         })}
       >
         <Input
@@ -31,10 +32,14 @@ export const SubscribeFoprm = ({ action }) => {
               message: 'Invalid email address',
             },
           })}
+          placeholder="Enter you email"
         />
 
-        {errors.email?.message && <p>{errors.email?.message}</p>}
-        <ButtonBgOrange title="Submit" />
+        {errors.email?.message && (
+          <ErrorMessage>{errors.email?.message}</ErrorMessage>
+        )}
+
+        <ButtonBgOrange title="Subscribe" />
       </Form>
     </FormHolder>
   );
