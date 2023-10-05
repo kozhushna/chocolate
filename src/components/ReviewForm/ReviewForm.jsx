@@ -1,48 +1,27 @@
 import { useForm } from 'react-hook-form';
-import { useState, useEffect } from 'react';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
-import { sizes } from '../../styles/theme';
 import { theme } from 'styles';
 
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import {
   Accent,
-  BackgroundWrapper,
-  ButtonWrapper,
   ContentWrapper,
   ErrorMessage,
   Form,
   FormHolder,
   FormTitle,
   Input,
-} from './SubscribeForm.styled';
+} from './ReviewForm.styled';
 
-export const SubscribeForm = ({ action }) => {
+export const ReviewForm = ({ action }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
   return (
     <FormHolder>
-      <BackgroundWrapper />
       <ButtonClose
         action={action}
         fill={theme.colors.white}
@@ -76,12 +55,7 @@ export const SubscribeForm = ({ action }) => {
             placeholder="Enter you email"
           />
 
-          <ButtonWrapper>
-            <ButtonBgOrange
-              title={windowSize[0] > sizes.onlymobile ? 'Subscribe' : 'Submit'}
-              smallFontSize={'14px'}
-            />
-          </ButtonWrapper>
+          <ButtonBgOrange title={'Send'} smallFontSize={'14px'} />
         </ContentWrapper>
         {errors.email?.message && (
           <ErrorMessage>{errors.email?.message}</ErrorMessage>

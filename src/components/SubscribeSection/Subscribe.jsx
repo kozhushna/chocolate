@@ -8,7 +8,7 @@ import {
   Title,
 } from './Subscribe.styled';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
-import { SubscribeFoprm } from 'components/SubscribeForm/SubscribeForm';
+import { SubscribeForm } from 'components/SubscribeForm/SubscribeForm';
 
 export const Subscribe = () => {
   const { isModalOpen, openModal, closeModal } = useModal();
@@ -31,7 +31,7 @@ export const Subscribe = () => {
       </SubscribeSection>
       {isModalOpen && (
         <Modal onClose={closeModal}>
-          <SubscribeFoprm action={closeModal} />
+          <SubscribeForm action={closeModal} />
         </Modal>
       )}
     </>
