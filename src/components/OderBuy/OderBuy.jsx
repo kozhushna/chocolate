@@ -1,5 +1,4 @@
 import { useForm } from 'react-hook-form';
-// import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-input-2';
 import './style.css';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
@@ -8,22 +7,14 @@ import {
   StyledForm,
   StyledInput,
   StyledLabel,
-  // StyledPhoneInput,
   StyledTextarea,
   Wrapper,
   WrapperInput,
 } from './OderBuy.styled';
-// import { computeHeadingLevel } from '@testing-library/react';
-// import { ClassNames } from '@emotion/react';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
-// import { PhoneInput } from 'react-international-phone';
-// import 'react-international-phone/style.css';
 
 export const FormOderBuy = ({ action }, props) => {
-  // const [value, setValue] = useState();
   const { register, handleSubmit } = useForm();
-  // const [data, setData] = useState('');
-  // const [phone, setPhone] = useState('');
 
   return (
     <StyledDiv>
@@ -46,29 +37,12 @@ export const FormOderBuy = ({ action }, props) => {
         </Wrapper>
         <Wrapper>
           <StyledLabel htmlFor="phone">Phone number</StyledLabel>
-          {/* <PhoneInput
-            {...register('phone')}
-            defaultCountry="US"
-            placeholder="Phone number"
-            value={value}
-            onChange={setValue}
-            specialLabel={''}
-            country={'th'}
-            inputStyle={{
-              borderColor: 'red',
-            }}
-          /> */}
-          <StyledInput {...register('phone')} placeholder="Phone number" />
           <PhoneInput
+            {...register('phone')}
             country={'ua'}
             placeholder="Phone number"
             inputStyle={{
-              border: '1.6px solid',
-              borderRadius: '13px',
-              borderColor: `${props => props.theme.colors.inputBorder}`,
               padding: '22px 22px 22px 55px',
-              fontSize: '14px',
-              color: `${props => props.theme.colors.inputText}`,
             }}
             {...props}
           />

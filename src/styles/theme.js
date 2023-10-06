@@ -21,7 +21,6 @@ export const theme = Object.freeze({
     buttonHover: '#FCF1E0',
     backdropActive: '#00000080',
     lightBorder: 'rgba(255, 255, 255, 0.10)',
-    inputBorder: 'rgba(17, 17, 17, 0.05)',
   },
   sizes: sizes,
 
