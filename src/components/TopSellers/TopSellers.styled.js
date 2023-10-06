@@ -35,8 +35,12 @@ export const TopSallersFooter = styled.div`
 `;
 
 export const Description = styled.p`
-  width: 306px;
   text-align: left;
+
+  @media screen and (${props => props.theme.devices.mobile}) {
+    width: 306px;
+  }
+
   @media screen and (${props => props.theme.devices.onlymobile}) {
     margin-right: 29px;
     margin-bottom: 20px;

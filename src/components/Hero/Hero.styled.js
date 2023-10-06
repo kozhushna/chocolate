@@ -71,6 +71,7 @@ export const BackgroundWrapper = styled.div`
     background-image: linear-gradient(${theme.linerGradient}),
       url(${desktopBackground});
     padding-top: 381px;
+    padding-bottom: 60px;
 
     @media screen and (${props => props.theme.devices.retina}),
       (min-resolution: 192dpi),

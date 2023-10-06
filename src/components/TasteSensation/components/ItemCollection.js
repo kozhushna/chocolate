@@ -41,7 +41,6 @@ const ItemCollection = () => {
           key={index}
           imageSrc={item.imageSrc}
           defaultText={item.defaultText}
-          lable={item.lable}
           hoverText={item.hoverText}
         />
       ))}
