@@ -1,21 +1,20 @@
-// import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import PhoneInput from 'react-phone-input-2';
+import './style.css';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
 import {
   StyledDiv,
   StyledForm,
   StyledInput,
+  StyledLabel,
   StyledTextarea,
   Wrapper,
   WrapperInput,
 } from './OderBuy.styled';
-// import { computeHeadingLevel } from '@testing-library/react';
-// import { ClassNames } from '@emotion/react';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 
-export const FormOderBuy = ({ action }) => {
+export const FormOderBuy = ({ action }, props) => {
   const { register, handleSubmit } = useForm();
-  // const [data, setData] = useState('');
 
   return (
     <StyledDiv>
@@ -26,26 +25,34 @@ export const FormOderBuy = ({ action }) => {
         })}
       >
         <Wrapper>
-          <label htmlFor="firstName">Personal information</label>
+          <StyledLabel htmlFor="firstName">Personal information</StyledLabel>
           <WrapperInput>
             <StyledInput {...register('firstName')} placeholder="Name" />
             <StyledInput {...register('surname')} placeholder="Surname" />
           </WrapperInput>
         </Wrapper>
         <Wrapper>
-          <label htmlFor="email">Email</label>
+          <StyledLabel htmlFor="email">Email</StyledLabel>
           <StyledInput {...register('email')} placeholder="Enter you email" />
         </Wrapper>
         <Wrapper>
-          <label htmlFor="phone">Phone number</label>
-          <StyledInput {...register('phone')} placeholder="Phone number" />
+          <StyledLabel htmlFor="phone">Phone number</StyledLabel>
+          <PhoneInput
+            {...register('phone')}
+            country={'ua'}
+            placeholder="Phone number"
+            inputStyle={{
+              padding: '22px 22px 22px 55px',
+            }}
+            {...props}
+          />
         </Wrapper>
         <Wrapper>
-          <label htmlFor="card">Card number</label>
+          <StyledLabel htmlFor="card">Card number</StyledLabel>
           <StyledInput {...register('card')} placeholder="Enter card" />
         </Wrapper>
         <Wrapper>
-          <label htmlFor="Comment">Comment</label>
+          <StyledLabel htmlFor="Comment">Comment</StyledLabel>
           <StyledTextarea {...register('comment')} placeholder="Enter text" />
         </Wrapper>
         {/* <p>{data}</p> */}

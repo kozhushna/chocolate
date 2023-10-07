@@ -16,10 +16,11 @@ export const theme = Object.freeze({
     primaryText: '#111',
     darkText: 'rgba(17, 17, 17, 0.70)',
     lightText: 'rgba(255, 255, 255, 0.70)',
+    inputText: 'rgba(64, 64, 64, 0.30)',
+    inputBorder: 'rgba(17, 17, 17, 0.05)',
     buttonHover: '#FCF1E0',
     backdropActive: '#00000080',
     lightBorder: 'rgba(255, 255, 255, 0.10)',
-    inputBorder: 'rgba(17, 17, 17, 0.05)',
   },
   sizes: sizes,
 
