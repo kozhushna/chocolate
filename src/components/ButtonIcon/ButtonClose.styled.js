@@ -4,7 +4,7 @@ export const StyledButton = styled.button`
   position: absolute;
   right: 14px;
   top: 14px;
-  fill: ${props => props.theme.colors.darkText};
+  fill: ${props => props.fill ?? props.theme.colors.darkText};
   transition: fill ${props => props.theme.baseTransition};
 
   @media screen and (${props => props.theme.devices.tablet}) {
