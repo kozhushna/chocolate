@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chocolate/static/css/main.d518e9c0.css",
-    "main.js": "/chocolate/static/js/main.1afcf745.js",
+    "main.css": "/chocolate/static/css/main.317a6e82.css",
+    "main.js": "/chocolate/static/js/main.dfc6240e.js",
     "static/js/787.c899bc57.chunk.js": "/chocolate/static/js/787.c899bc57.chunk.js",
     "static/media/hero-desktop@2x.jpg": "/chocolate/static/media/hero-desktop@2x.1be0ef1972f033a51127.jpg",
     "static/media/hero-tablet@2x.jpg": "/chocolate/static/media/hero-tablet@2x.2af1da57c18016c20c22.jpg",
@@ -60,12 +60,12 @@
     "static/media/Coin.svg": "/chocolate/static/media/Coin.9aa2a860978e0c7bf18a1b0d5b6393e8.svg",
     "index.html": "/chocolate/index.html",
     "static/media/spoon.svg": "/chocolate/static/media/spoon.9a7a1cd0eec0d47acf6533ccfac5344b.svg",
-    "main.d518e9c0.css.map": "/chocolate/static/css/main.d518e9c0.css.map",
-    "main.1afcf745.js.map": "/chocolate/static/js/main.1afcf745.js.map",
+    "main.317a6e82.css.map": "/chocolate/static/css/main.317a6e82.css.map",
+    "main.dfc6240e.js.map": "/chocolate/static/js/main.dfc6240e.js.map",
     "787.c899bc57.chunk.js.map": "/chocolate/static/js/787.c899bc57.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d518e9c0.css",
-    "static/js/main.1afcf745.js"
+    "static/css/main.317a6e82.css",
+    "static/js/main.dfc6240e.js"
   ]
 }
