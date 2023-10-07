@@ -1,4 +1,5 @@
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
+import PhoneInput from 'react-phone-input-2';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
 
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
@@ -17,6 +18,7 @@ export const ReviewForm = ({ action }) => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm();
 
@@ -66,7 +68,28 @@ export const ReviewForm = ({ action }) => {
           {errors.email?.message && (
             <ErrorText>{errors.email?.message}</ErrorText>
           )}
-          <Input
+
+          <Controller
+            control={control}
+            name="phone"
+            rules={{ required: true }}
+            render={({ field: { ref, ...field } }) => (
+              <PhoneInput
+                {...field}
+                inputExtraProps={{
+                  ref,
+                  required: true,
+                  autoFocus: true,
+                }}
+                country={'ua'}
+                countryCodeEditable={true}
+                placeholder="123"
+
+                // specialLabel={'Player Mobile Number'}
+              />
+            )}
+          />
+          {/* <Input
             type="text"
             {...register('phone', {
               required: {
@@ -85,7 +108,7 @@ export const ReviewForm = ({ action }) => {
               },
             })}
             placeholder="Phone number"
-          />
+          /> */}
 
           {errors.phone?.message && (
             <ErrorText>{errors.phone?.message}</ErrorText>
