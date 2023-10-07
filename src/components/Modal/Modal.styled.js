@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { theme } from 'styles';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -17,16 +16,16 @@ export const ModalContent = styled.div`
   top: 50%;
   left: 50%;
   width: calc(100vw - 48px);
-  background: ${theme.colors.mainBackground};
+  background: ${props => props.theme.colors.mainBackground};
   transform: translate(-50%, -50%);
   border-radius: 15px;
   /* padding: 32px 24px 32px 24px; */
 
-  @media screen and (${theme.devices.mobile}) {
+  @media screen and (${props => props.theme.devices.mobile}) {
     width: 311px;
   }
 
-  @media screen and (${theme.devices.tablet}) {
+  @media screen and (${props => props.theme.devices.tablet}) {
     /* width: 538px;
     padding: 32px 24px 32px 24px; */
   }

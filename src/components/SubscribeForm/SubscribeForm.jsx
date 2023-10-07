@@ -43,11 +43,7 @@ export const SubscribeForm = ({ action }) => {
   return (
     <FormHolder>
       <BackgroundWrapper />
-      <ButtonClose
-        action={action}
-        fill={theme.colors.white}
-        hoverFill={theme.colors.accent}
-      />
+      <ButtonClose action={action} fill={theme.colors.white} />
       <Form
         onSubmit={handleSubmit(data => {
           console.log(data.email);
