@@ -94,6 +94,8 @@ export const FormTitle = styled.p`
 
   @media screen and (${props => props.theme.devices.tablet}) {
     margin-bottom: 28px;
+    font-size: 24px;
+    letter-spacing: -0.72px;
   }
 `;
 
