@@ -1,16 +1,16 @@
 import { useForm } from 'react-hook-form';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
-import { theme } from 'styles';
 
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import {
   Accent,
-  ContentWrapper,
-  ErrorMessage,
+  // ContentWrapper,
+  ErrorText,
   Form,
   FormHolder,
   FormTitle,
   Input,
+  Textarea,
 } from './ReviewForm.styled';
 
 export const ReviewForm = ({ action }) => {
@@ -22,11 +22,7 @@ export const ReviewForm = ({ action }) => {
 
   return (
     <FormHolder>
-      <ButtonClose
-        action={action}
-        fill={theme.colors.white}
-        hoverFill={theme.colors.accent}
-      />
+      <ButtonClose action={action} />
       <Form
         onSubmit={handleSubmit(data => {
           console.log(data);
@@ -49,6 +45,8 @@ export const ReviewForm = ({ action }) => {
           })}
           placeholder="Name"
         />
+
+        {errors.name?.message && <ErrorText>{errors.name?.message}</ErrorText>}
         <Input
           type="text"
           {...register('email', {
@@ -64,12 +62,55 @@ export const ReviewForm = ({ action }) => {
           })}
           placeholder="Enter you email"
         />
+        {errors.email?.message && (
+          <ErrorText>{errors.email?.message}</ErrorText>
+        )}
+        <Input
+          type="text"
+          {...register('phone', {
+            required: {
+              value: true,
+              message: 'Please enter your phone number',
+            },
+
+            maxLength: {
+              value: 10,
+              message: 'Your phone should be less than 10 numbers',
+            },
+
+            minLength: {
+              value: 8,
+              message: 'Your phone should be greater than 8 numbers',
+            },
+          })}
+          placeholder="Phone number"
+        />
+
+        {errors.phone?.message && (
+          <ErrorText>{errors.phone?.message}</ErrorText>
+        )}
+        <Textarea
+          type="text"
+          {...register('comment', {
+            required: {
+              value: true,
+              message: 'Please enter your review',
+            },
+
+            minLength: {
+              value: 2,
+              message: 'Your review should be greater than 2 symbols',
+            },
+          })}
+          placeholder="Enter text"
+        />
+
+        {errors.comment?.message && (
+          <ErrorText>{errors.comment?.message}</ErrorText>
+        )}
 
         <ButtonBgOrange title={'Send'} smallFontSize={'14px'} />
         {/* </ContentWrapper> */}
-        {errors.email?.message && (
-          <ErrorMessage>{errors.email?.message}</ErrorMessage>
-        )}
       </Form>
     </FormHolder>
   );

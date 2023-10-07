@@ -45,13 +45,25 @@ export const Input = styled.input`
   }
 `;
 
-export const ErrorMessage = styled.p`
+export const Textarea = styled.textarea`
+  outline: none;
+  width: 100%;
+  height: 137px;
+  border: 1.6px solid;
+  border-radius: 13px;
+  border-color: ${props => props.theme.colors.inputBorder};
+  padding: 22px;
+  font-size: 18px;
+  color: ${props => props.theme.colors.inputText};
+  resize: none;
+`;
+
+export const ErrorText = styled.p`
   color: ${props => props.theme.colors.validationError};
 `;
 
 export const FormTitle = styled.p`
   max-width: 255px;
-
   margin-bottom: 24px;
   font-size: 20px;
   font-style: normal;
