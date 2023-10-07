@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chocolate/static/css/main.317a6e82.css",
-    "main.js": "/chocolate/static/js/main.f59147d9.js",
+    "main.js": "/chocolate/static/js/main.6a70a0bd.js",
     "static/js/787.c899bc57.chunk.js": "/chocolate/static/js/787.c899bc57.chunk.js",
     "static/media/hero-desktop@2x.jpg": "/chocolate/static/media/hero-desktop@2x.1be0ef1972f033a51127.jpg",
     "static/media/hero-tablet@2x.jpg": "/chocolate/static/media/hero-tablet@2x.2af1da57c18016c20c22.jpg",
@@ -61,11 +61,11 @@
     "index.html": "/chocolate/index.html",
     "static/media/spoon.svg": "/chocolate/static/media/spoon.9a7a1cd0eec0d47acf6533ccfac5344b.svg",
     "main.317a6e82.css.map": "/chocolate/static/css/main.317a6e82.css.map",
-    "main.f59147d9.js.map": "/chocolate/static/js/main.f59147d9.js.map",
+    "main.6a70a0bd.js.map": "/chocolate/static/js/main.6a70a0bd.js.map",
     "787.c899bc57.chunk.js.map": "/chocolate/static/js/787.c899bc57.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.317a6e82.css",
-    "static/js/main.f59147d9.js"
+    "static/js/main.6a70a0bd.js"
   ]
 }
