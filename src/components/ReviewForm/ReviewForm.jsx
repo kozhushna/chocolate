@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
+import { emailRegex, phonePatterns } from 'utils/globalConstants';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
-
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import {
   Accent,
@@ -15,6 +16,28 @@ import {
 } from './ReviewForm.styled';
 
 export const ReviewForm = ({ action }) => {
+  const defaultCountry = 'ua';
+  let phonePattern = phonePatterns[defaultCountry.toUpperCase()];
+  const [isPhoneValid, setIsPhoneValid] = useState(false);
+
+  const handlePhoneChanged = (value, country) => {
+    if (country) {
+      phonePattern = phonePatterns[country.countryCode.toUpperCase()];
+
+      setIsPhoneValid(value && value.match(phonePattern) != null);
+    }
+  };
+
+  // const isValidPhone = value => {
+  //   console.log(value, phonePattern, typeof value);
+  //   if (value && value.match(phonePattern) != null) {
+  //     console.log(value, phonePattern);
+  //     return true;
+  //   }
+
+  //   return false;
+  // };
+
   const {
     register,
     handleSubmit,
@@ -58,8 +81,7 @@ export const ReviewForm = ({ action }) => {
                 message: 'Please enter your email address',
               },
               pattern: {
-                value:
-                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                value: emailRegex,
                 message: 'Invalid email address',
               },
             })}
@@ -72,7 +94,10 @@ export const ReviewForm = ({ action }) => {
           <Controller
             control={control}
             name="phone"
-            rules={{ required: true }}
+            rules={{
+              //required: true,
+              validate: () => isPhoneValid,
+            }}
             render={({ field: { ref, ...field } }) => (
               <PhoneInput
                 {...field}
@@ -81,11 +106,15 @@ export const ReviewForm = ({ action }) => {
                   required: true,
                   autoFocus: true,
                 }}
-                country={'ua'}
+                country={defaultCountry}
+                regions={'europe'}
                 countryCodeEditable={false}
                 placeholder="Phone number"
-
-                // specialLabel={'Player Mobile Number'}
+                onChange={(value, country, e) => {
+                  field.onChange(e);
+                  handlePhoneChanged(value, country);
+                }}
+                specialLabel={'Player Mobile Number'}
               />
             )}
           />
