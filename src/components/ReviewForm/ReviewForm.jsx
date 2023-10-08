@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import PhoneInput from 'react-phone-input-2';
 import { emailRegex, phonePatterns } from 'utils/globalConstants';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
@@ -13,30 +11,20 @@ import {
   FormTitle,
   Input,
   Textarea,
+  PhoneStyled,
 } from './ReviewForm.styled';
 
 export const ReviewForm = ({ action }) => {
   const defaultCountry = 'ua';
   let phonePattern = phonePatterns[defaultCountry.toUpperCase()];
-  const [isPhoneValid, setIsPhoneValid] = useState(false);
+  let isPhoneValid = false;
 
   const handlePhoneChanged = (value, country) => {
     if (country) {
       phonePattern = phonePatterns[country.countryCode.toUpperCase()];
-
-      setIsPhoneValid(value && value.match(phonePattern) != null);
+      isPhoneValid = value && value.match(phonePattern) != null;
     }
   };
-
-  // const isValidPhone = value => {
-  //   console.log(value, phonePattern, typeof value);
-  //   if (value && value.match(phonePattern) != null) {
-  //     console.log(value, phonePattern);
-  //     return true;
-  //   }
-
-  //   return false;
-  // };
 
   const {
     register,
@@ -95,11 +83,10 @@ export const ReviewForm = ({ action }) => {
             control={control}
             name="phone"
             rules={{
-              //required: true,
               validate: () => isPhoneValid,
             }}
             render={({ field: { ref, ...field } }) => (
-              <PhoneInput
+              <PhoneStyled
                 {...field}
                 inputExtraProps={{
                   ref,
@@ -107,42 +94,18 @@ export const ReviewForm = ({ action }) => {
                   autoFocus: true,
                 }}
                 country={defaultCountry}
-                regions={'europe'}
+                excludeCountries={['ru']}
                 countryCodeEditable={false}
                 placeholder="Phone number"
                 onChange={(value, country, e) => {
-                  field.onChange(e);
                   handlePhoneChanged(value, country);
+                  field.onChange(e);
                 }}
-                specialLabel={'Player Mobile Number'}
               />
             )}
           />
-          {errors['phone'] && <p>Invalid Phone</p>}
-          {/* <Input
-            type="text"
-            {...register('phone', {
-              required: {
-                value: true,
-                message: 'Please enter your phone number',
-              },
+          {errors['phone'] && <ErrorText>Invalid Phone</ErrorText>}
 
-              maxLength: {
-                value: 10,
-                message: 'Your phone should be less than 10 numbers',
-              },
-
-              minLength: {
-                value: 8,
-                message: 'Your phone should be greater than 8 numbers',
-              },
-            })}
-            placeholder="Phone number"
-          /> */}
-
-          {errors.phone?.message && (
-            <ErrorText>{errors.phone?.message}</ErrorText>
-          )}
           <Textarea
             type="text"
             {...register('comment', {
@@ -169,49 +132,3 @@ export const ReviewForm = ({ action }) => {
     </FormHolder>
   );
 };
-
-// import React from 'react';
-// import { useForm, Controller } from 'react-hook-form';
-// import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
-
-// import 'react-phone-number-input/style.css';
-
-// const MyForm = () => {
-//   const {
-//     handleSubmit,
-//     formState: { errors },
-//     control,
-//   } = useForm();
-
-//   const onSubmit = data => {
-//     console.log(data);
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit(onSubmit)} className="user-info-form">
-//       <div>
-//         <label htmlFor="phone-input">Phone Number</label>
-//         <Controller
-//           name="phone-input"
-//           control={control}
-//           rules={{
-//             validate: value => isValidPhoneNumber(value),
-//           }}
-//           render={({ field: { onChange, value } }) => (
-//             <PhoneInput
-//               value={value}
-//               onChange={onChange}
-//               defaultCountry="TH"
-//               id="phone-input"
-//             />
-//           )}
-//         />
-//         {errors['phone-input'] && (
-//           <p className="error-message">Invalid Phone</p>
-//         )}
-//       </div>
-//     </form>
-//   );
-// };
-
-// export default MyForm;
