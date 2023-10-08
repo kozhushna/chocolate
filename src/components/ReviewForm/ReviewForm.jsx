@@ -95,7 +95,7 @@ export const ReviewForm = ({ action }) => {
                 }}
                 country={defaultCountry}
                 excludeCountries={['ru']}
-                countryCodeEditable={false}
+                countryCodeEditable={true}
                 placeholder="Phone number"
                 onChange={(value, country, e) => {
                   handlePhoneChanged(value, country);
