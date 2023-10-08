@@ -116,6 +116,7 @@ export const ContentWrapper = styled.div`
 
 export const PhoneStyled = styled(PhoneInput)`
   .form-control {
+    width: 100%;
     padding: 14px 56px;
     font-size: 14px;
     font-family: Montserrat;
