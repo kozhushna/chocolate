@@ -16,14 +16,23 @@ import {
 
 export const ReviewForm = ({ action }) => {
   const defaultCountry = 'ua';
-  let phonePattern = phonePatterns[defaultCountry.toUpperCase()];
-  let isPhoneValid = false;
+  //let phonePattern = phonePatterns[defaultCountry.toUpperCase()];
+  //let isPhoneValid = false;
 
-  const handlePhoneChanged = (value, country) => {
-    if (country) {
-      phonePattern = phonePatterns[country.countryCode.toUpperCase()];
-      isPhoneValid = value && value.match(phonePattern) != null;
+  // const handlePhoneChanged = (value, country) => {
+  //   if (country) {
+  //     phonePattern = phonePatterns[country.countryCode.toUpperCase()];
+  //     isPhoneValid = value && value.match(phonePattern) != null;
+  //   }
+  // };
+
+  const isPhoneValid = value => {
+    const culture = document.querySelector('.flag').classList[1];
+    if (value && culture) {
+      const phonePattern = phonePatterns[culture.toUpperCase()];
+      return phonePattern && value.match(phonePattern) != null;
     }
+    return false;
   };
 
   const {
@@ -83,7 +92,9 @@ export const ReviewForm = ({ action }) => {
             control={control}
             name="phone"
             rules={{
-              validate: () => isPhoneValid,
+              validate: value => {
+                return isPhoneValid(value);
+              },
             }}
             render={({ field: { ref, ...field } }) => (
               <PhoneStyled
@@ -97,10 +108,10 @@ export const ReviewForm = ({ action }) => {
                 excludeCountries={['ru']}
                 countryCodeEditable={true}
                 placeholder="Phone number"
-                onChange={(value, country, e) => {
-                  handlePhoneChanged(value, country);
-                  field.onChange(e);
-                }}
+                // onChange={(value, country, e) => {
+                //   handlePhoneChanged(value, country);
+                //   field.onChange(value);
+                // }}
               />
             )}
           />
