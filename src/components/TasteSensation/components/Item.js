@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Element } from 'react-scroll';
 import './styleScroll.css';
 import {
@@ -13,24 +13,14 @@ import {
 } from './general.styled';
 
 const Item = ({ imageSrc, defaultText, hoverText }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
   return (
-    <ItemStyles onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <ImageContainer>
+    <ItemStyles>
+      <ImageContainer className="image_container">
         <StyledImage src={imageSrc} alt="Item" />
         <ImageContainerText>{defaultText}</ImageContainerText>
       </ImageContainer>
 
-      <CardOverlay isHovered={isHovered}>
+      <CardOverlay className="info_title">
         <Info>
           <InfoTitle>{defaultText}</InfoTitle>
 

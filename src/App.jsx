@@ -23,11 +23,7 @@ function App() {
             </Container>
           </FeatureContainerStyled>
         </Section>
-        <Section>
-          <Container>
-            <TasteSensation />
-          </Container>
-        </Section>
+        <TasteSensation />
         <HowItsMade />
         <OurProducts />
         <TopSellers />

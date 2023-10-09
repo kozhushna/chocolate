@@ -7,7 +7,7 @@ import desktopBackground from '../../images/Subscribe/subcribe-desktop.jpg';
 import desktopBackground2x from '../../images/Subscribe/subcribe-desktop@2x.jpg';
 
 export const SubscribeSection = styled.section`
-  max-width: 1200px;
+  max-width: 1136px;
   padding-top: 62px;
   padding-bottom: 62px;
   margin: 0 auto;
@@ -17,6 +17,8 @@ export const SubscribeSection = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 
   @media screen and (${props => props.theme.devices.retina}),
     (min-resolution: 192dpi),

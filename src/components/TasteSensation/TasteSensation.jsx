@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, SubTitle } from './TasteSensation.styled';
+import { SubTitle } from './TasteSensation.styled';
 import ItemCollection from './components/ItemCollection';
-import {Title, Accent } from '../../App.styled'
-
+import { Title, Accent } from '../../App.styled';
+import { Section, Container } from 'App.styled';
 
 const TasteSensation = () => {
   return (
-    <>
+    <Section>
       <Container>
         <Title>
           It all adds up to one <br /> exceptional <Accent>taste</Accent>{' '}
@@ -18,9 +18,10 @@ const TasteSensation = () => {
           ingredients to the careful crafting of each individual piece, every
           step of our process adds up to one exceptional taste sensation.
         </SubTitle>
+
+        <ItemCollection />
       </Container>
-      <ItemCollection />
-    </>
+    </Section>
   );
 };
 

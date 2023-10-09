@@ -46,7 +46,7 @@ export const Container = styled.div`
 
 export const FeatureContainerStyled = styled.div`
   background-color: ${props => props.theme.colors.darkBackground};
-  max-width: 1200px;
+  max-width: 1136px;
   margin: auto;
 `;
 
