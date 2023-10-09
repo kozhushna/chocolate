@@ -1,15 +1,25 @@
 import styled from '@emotion/styled';
 import { ModalContent } from 'components/Modal/Modal.styled';
 import PhoneInput from 'react-phone-input-2';
+import { FormTitle } from 'components/ReviewForm/ReviewForm.styled';
 
 export const StyledDiv = styled(ModalContent)`
+  padding: 32px 24px 32px 24px;
   @media screen and (${props => props.theme.devices.tablet}) {
     width: 609px;
     padding: 48px;
   }
 `;
 
-export const StyledForm = styled.form``;
+export const StyledFormTitle = styled(FormTitle)`
+  margin-right: auto;
+  margin-left: auto;
+  width: 125px;
+`;
+
+export const Accent = styled.span`
+  color: ${props => props.theme.colors.accent};
+`;
 
 export const Wrapper = styled.div`
   margin-bottom: 18px;
@@ -58,7 +68,7 @@ export const StyledInput = styled.input`
 export const PhoneStyled = styled(PhoneInput)`
   .form-control {
     width: 100%;
-    padding: 22px 56px;
+    /* padding: 22px 56px; */
     font-size: 14px;
     font-family: Montserrat;
     font-style: normal;
@@ -71,7 +81,6 @@ export const PhoneStyled = styled(PhoneInput)`
 
     @media screen and (${props => props.theme.devices.tablet}) {
       padding: 22px 64px;
-      /* max-height: 46px; */
       font-size: 18px;
       letter-spacing: -0.36px;
     }

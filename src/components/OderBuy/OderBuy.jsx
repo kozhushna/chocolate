@@ -3,7 +3,7 @@ import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
 import {
   PhoneStyled,
   StyledDiv,
-  StyledForm,
+  StyledFormTitle,
   StyledInput,
   StyledLabel,
   StyledTextarea,
@@ -13,17 +13,18 @@ import {
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
 import { phonePatterns } from 'utils/globalConstants';
 import { ErrorText } from 'components/ReviewForm/ReviewForm.styled';
+import { Accent } from 'App.styled';
+import { ChoiceWeight } from './WeightChocolate';
 
 export const FormOderBuy = ({ action }) => {
   const defaultCountry = 'ua';
-  let phonePattern = phonePatterns[defaultCountry.toUpperCase()];
-  let isPhoneValid = false;
-
-  const handlePhoneChanged = (value, country) => {
-    if (country) {
-      phonePattern = phonePatterns[country.countryCode.toUpperCase()];
-      isPhoneValid = value && value.match(phonePattern) != null;
+  const isPhoneValid = value => {
+    const culture = document.querySelector('.flag').classList[1];
+    if (value && culture) {
+      const phonePattern = phonePatterns[culture.toUpperCase()];
+      return phonePattern && value.match(phonePattern) != null;
     }
+    return false;
   };
 
   const {
@@ -36,11 +37,16 @@ export const FormOderBuy = ({ action }) => {
   return (
     <StyledDiv>
       <ButtonClose action={action} />
-      <StyledForm
+      <form
         onSubmit={handleSubmit(data => {
           console.log(data);
         })}
       >
+        <StyledFormTitle>
+          <Accent>Buy </Accent>
+          now
+        </StyledFormTitle>
+        <ChoiceWeight />
         <Wrapper>
           <StyledLabel htmlFor="firstName">Personal information</StyledLabel>
           <WrapperInput>
@@ -59,7 +65,9 @@ export const FormOderBuy = ({ action }) => {
             control={control}
             name="phone"
             rules={{
-              validate: () => isPhoneValid,
+              validate: value => {
+                return isPhoneValid(value);
+              },
             }}
             render={({ field: { ref, ...field } }) => (
               <PhoneStyled
@@ -73,10 +81,6 @@ export const FormOderBuy = ({ action }) => {
                 excludeCountries={['ru']}
                 countryCodeEditable={true}
                 placeholder="Phone number"
-                onChange={(value, country, e) => {
-                  handlePhoneChanged(value, country);
-                  field.onChange(e);
-                }}
               />
             )}
           />
@@ -92,7 +96,7 @@ export const FormOderBuy = ({ action }) => {
         </Wrapper>
         {/* <p>{data}</p> */}
         <ButtonBgOrange title="Submit" />
-      </StyledForm>
+      </form>
     </StyledDiv>
   );
 };
