@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, SubTitle } from './TasteSensation.styled';
 import ItemCollection from './components/ItemCollection';
-import { Accent, Title } from 'App.styled';
+import {Title, Accent } from '../../App.styled'
+
 
 const TasteSensation = () => {
   return (

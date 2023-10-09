@@ -46,15 +46,15 @@ export const Container = styled.div`
 
 export const FeatureContainerStyled = styled.div`
   background-color: ${props => props.theme.colors.darkBackground};
+  max-width: 1200px;
+  margin: auto;
 `;
 
 export const Title = styled.h2`
   margin-bottom: 32px;
   color: ${props => props.theme.colors.primaryText};
   text-align: center;
-  font-family: Montserrat;
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.6px;

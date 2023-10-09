@@ -1,8 +1,14 @@
 import React from 'react';
 import ItemCollection from './components/ItemCollection';
+import { VisuallyHidden } from './Features.styled';
 
 const Features = () => {
-  return <ItemCollection />;
+  return (
+    <>
+      <VisuallyHidden>Features</VisuallyHidden>
+      <ItemCollection />
+    </>
+  );
 };
 
 export default Features;

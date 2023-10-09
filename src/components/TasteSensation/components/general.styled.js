@@ -5,19 +5,19 @@ export const ItemStyles = styled.div`
   height: 270px;
   padding: 28px;
   position: relative;
-  border: 1px solid #fd9222;
+  border: 1px solid ${props => props.theme.colors.accent};
   border-radius: 15%;
   margin-bottom: 32px;
   margin-right: 19px;
 
   &:first-of-type {
-    background-color: #fd9222;
-    color: #fff;
+    background-color: ${props => props.theme.colors.accent};
+    color: ${props => props.theme.colors.white};
   }
 
   &:nth-of-type(3) {
     background-color: #1e1823;
-    color: #fff;
+    color: ${props => props.theme.colors.white};
   }
 
   @media screen and (min-width: 768px) {
@@ -37,22 +37,20 @@ export const StyledImage = styled.img`
 
 export const ImageContainerText = styled.p`
   margin-top: 36px;
-  font-family: Montserrat;
   font-size: 14px;
-  font-weight: 600;
   line-height: 18px;
   letter-spacing: -0.28px;
 `;
 
 export const Info = styled.div`
-  background-color: white;
+  background-color: ${props => props.theme.colors.white};
   padding: 20px;
   color: black;
 `;
 
 export const CardOverlay = styled.div`
   position: absolute;
-  background-color: white;
+  background-color: ${props => props.theme.colors.white};
   border-radius: 30px;
   top: 0;
   left: 0;
@@ -80,19 +78,15 @@ export const Cards = styled.div`
 `;
 
 export const InfoTitle = styled.p`
-  color: #111;
-  font-family: Montserrat;
+  color: ${props => props.theme.colors.primaryText};
   font-size: 18px;
-  font-weight: 600;
   letter-spacing: -0.54px;
   text-align: left;
 `;
 
 export const InfoText = styled.p`
-  color: #111;
-  font-family: Montserrat;
+  color: ${props => props.theme.colors.primaryText};
   font-size: 13px;
-  font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.28px;
   text-align: left;
