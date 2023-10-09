@@ -145,14 +145,14 @@ export const PhoneStyled = styled(PhoneInput)`
   .selected-flag {
     padding-left: 18px;
     &::before {
-      border: none;
-      box-shadow: none;
+      border: none !important;
+      box-shadow: none !important;
     }
 
     &.open {
       &::before {
-        border: none;
-        box-shadow: none;
+        border: none !important;
+        box-shadow: none !important;
       }
     }
 

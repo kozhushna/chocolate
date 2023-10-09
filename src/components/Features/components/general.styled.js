@@ -2,28 +2,25 @@ import styled from '@emotion/styled';
 
 export const ItemImg = styled.img`
   border-radius: 29px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid ${props => props.theme.colors.lightBorder};
   width: 62px;
   height: 62px;
   padding: 10px;
   position: relative;
 `;
 
-export const ItemTitle = styled.p`
+export const ItemTitle = styled.h5`
   color: ${props => props.theme.colors.white};
-  font-family: Montserrat;
   font-size: 18px;
-  font-weight: 600;
   text-align: left;
+  font-weight: 600;
   margin-top: 22px;
   padding-right: 50px;
 `;
 
 export const ItemText = styled.p`
   color: ${props => props.theme.colors.lightText};
-  font-family: Montserrat;
   font-size: 14px;
-  font-weight: 400;
   line-height: normal;
   letter-spacing: -0.28px;
   text-align: left;
@@ -50,7 +47,6 @@ export const ItemCollectionSeparator = styled.div`
 `;
 
 export const CollectionList = styled.ul`
-  list-style-type: none;
   padding: 20px;
   margin: 0;
   display: grid;
@@ -76,7 +72,6 @@ export const CollectionListItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 20px;
   position: relative;
   padding-left: 7px;
 `;
