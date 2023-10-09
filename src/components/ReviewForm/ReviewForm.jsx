@@ -16,16 +16,6 @@ import {
 
 export const ReviewForm = ({ action }) => {
   const defaultCountry = 'ua';
-  //let phonePattern = phonePatterns[defaultCountry.toUpperCase()];
-  //let isPhoneValid = false;
-
-  // const handlePhoneChanged = (value, country) => {
-  //   if (country) {
-  //     phonePattern = phonePatterns[country.countryCode.toUpperCase()];
-  //     isPhoneValid = value && value.match(phonePattern) != null;
-  //   }
-  // };
-
   const isPhoneValid = value => {
     const culture = document.querySelector('.flag').classList[1];
     if (value && culture) {
@@ -108,10 +98,6 @@ export const ReviewForm = ({ action }) => {
                 excludeCountries={['ru']}
                 countryCodeEditable={true}
                 placeholder="Phone number"
-                // onChange={(value, country, e) => {
-                //   handlePhoneChanged(value, country);
-                //   field.onChange(value);
-                // }}
               />
             )}
           />
