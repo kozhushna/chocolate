@@ -14,12 +14,9 @@ export const Container = styled.div`
 `;
 
 export const SubTitle = styled.p`
-  color: #111;
+  color: ${props => props.theme.colors.primaryText};
   text-align: center;
-  font-family: Montserrat;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.28px;
 `;
