@@ -1,18 +1,19 @@
 import styled from '@emotion/styled';
-import { theme } from 'styles';
-
-const position = window.innerWidth < theme.sizes.tablet ? '14px' : '24px';
 
 export const StyledButton = styled.button`
   position: absolute;
-  right: ${position};
-  top: ${position};
-  fill: ${theme.colors.darkText};
-  transition: fill ${theme.baseTransition};
+  right: 14px;
+  top: 14px;
+  fill: ${props => props.fill ?? props.theme.colors.darkText};
+  transition: fill ${props => props.theme.baseTransition};
+
+  @media screen and (${props => props.theme.devices.tablet}) {
+    right: 24px;
+    top: 24px;
+  }
 
   &:hover,
   &:focus {
-    scale: 110%;
-    fill: ${theme.colors.darkBackground};
+    fill: ${props => props.theme.colors.accent};
   }
 `;

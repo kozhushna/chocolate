@@ -25,7 +25,7 @@ export const Hero = () => {
                 moment of pure delight!
               </Title>
               <ButtonLinkWrapper>
-                <ButtonBgOrange action={openModal} tabletFontSize={'14px'} />
+                <ButtonBgOrange action={openModal} smallFontSize={'14px'} />
                 <Link href="#made">How it’s made</Link>
               </ButtonLinkWrapper>
             </ContentWrapper>
