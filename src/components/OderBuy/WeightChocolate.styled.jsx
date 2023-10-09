@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 export const List = styled.ul`
   display: flex;
   justify-content: space-between;
-  row-gap: 16px;
+  row-gap: 8px;
+
   margin-bottom: 40px;
   @media screen and (${props => props.theme.devices.onlymobile}) {
     flex-direction: column;
@@ -11,7 +12,7 @@ export const List = styled.ul`
 `;
 export const Item = styled.li`
   display: flex;
-  /* flex-direction: column; */
+  column-gap: 71px;
   padding: 8px 16px;
 
   row-gap: 14px;
@@ -26,11 +27,16 @@ export const Item = styled.li`
 `;
 
 export const Weight = styled.div`
-  padding: 8px 20px;
+  padding: 6px 16px;
+  margin: auto auto;
+  width: fit-content;
+  height: fit-content;
+  background: ${props => props.theme.colors.mainBackground};
   font-size: 14px;
   font-weight: 600;
   border-radius: 100px;
   border: ${props => `1px solid ${props.theme.colors.light}`};
-  width: fit-content;
-  margin: 0 auto;
+  @media screen and (${props => props.theme.devices.tablet}) {
+    padding: 8px 27px;
+  }
 `;
