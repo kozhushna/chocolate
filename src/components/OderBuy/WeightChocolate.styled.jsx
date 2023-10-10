@@ -12,7 +12,7 @@ export const List = styled.ul`
 `;
 export const Item = styled.li`
   display: flex;
-  column-gap: 71px;
+  column-gap: 50px;
   padding: 8px 16px;
 
   row-gap: 14px;
@@ -29,7 +29,7 @@ export const Item = styled.li`
 export const Weight = styled.div`
   padding: 6px 16px;
   margin: auto auto;
-  width: fit-content;
+  min-width: 50px;
   height: fit-content;
   background: ${props => props.theme.colors.mainBackground};
   font-size: 14px;
