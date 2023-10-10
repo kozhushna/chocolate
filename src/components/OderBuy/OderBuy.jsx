@@ -1,10 +1,9 @@
-import { useForm } from 'react-hook-form';
-import PhoneInput from 'react-phone-input-2';
-import './style.css';
+import { Controller, useForm } from 'react-hook-form';
 import { ButtonClose } from 'components/ButtonIcon/ButtonClose';
 import {
+  PhoneStyled,
   StyledDiv,
-  StyledForm,
+  StyledFormTitle,
   StyledInput,
   StyledLabel,
   StyledTextarea,
@@ -12,18 +11,42 @@ import {
   WrapperInput,
 } from './OderBuy.styled';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
+import { phonePatterns } from 'utils/globalConstants';
+import { ErrorText } from 'components/ReviewForm/ReviewForm.styled';
+import { Accent } from 'App.styled';
+import { ChoiceWeight } from './WeightChocolate';
 
-export const FormOderBuy = ({ action }, props) => {
-  const { register, handleSubmit } = useForm();
+export const FormOderBuy = ({ action }) => {
+  const defaultCountry = 'ua';
+  const isPhoneValid = value => {
+    const culture = document.querySelector('.flag').classList[1];
+    if (value && culture) {
+      const phonePattern = phonePatterns[culture.toUpperCase()];
+      return phonePattern && value.match(phonePattern) != null;
+    }
+    return false;
+  };
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
 
   return (
     <StyledDiv>
       <ButtonClose action={action} />
-      <StyledForm
+      <form
         onSubmit={handleSubmit(data => {
           console.log(data);
         })}
       >
+        <StyledFormTitle>
+          <Accent>Buy </Accent>
+          now
+        </StyledFormTitle>
+        <ChoiceWeight />
         <Wrapper>
           <StyledLabel htmlFor="firstName">Personal information</StyledLabel>
           <WrapperInput>
@@ -37,27 +60,43 @@ export const FormOderBuy = ({ action }, props) => {
         </Wrapper>
         <Wrapper>
           <StyledLabel htmlFor="phone">Phone number</StyledLabel>
-          <PhoneInput
-            {...register('phone')}
-            country={'ua'}
-            placeholder="Phone number"
-            inputStyle={{
-              padding: '22px 22px 22px 55px',
+
+          <Controller
+            control={control}
+            name="phone"
+            rules={{
+              validate: value => {
+                return isPhoneValid(value);
+              },
             }}
-            {...props}
+            render={({ field: { ref, ...field } }) => (
+              <PhoneStyled
+                {...field}
+                inputExtraProps={{
+                  ref,
+                  required: true,
+                  autoFocus: true,
+                }}
+                country={defaultCountry}
+                excludeCountries={['ru']}
+                countryCodeEditable={true}
+                placeholder="Phone number"
+              />
+            )}
           />
+          {errors['phone'] && <ErrorText>Invalid Phone</ErrorText>}
         </Wrapper>
-        <Wrapper>
+        {/* <Wrapper>
           <StyledLabel htmlFor="card">Card number</StyledLabel>
           <StyledInput {...register('card')} placeholder="Enter card" />
-        </Wrapper>
+        </Wrapper> */}
         <Wrapper>
           <StyledLabel htmlFor="Comment">Comment</StyledLabel>
           <StyledTextarea {...register('comment')} placeholder="Enter text" />
         </Wrapper>
         {/* <p>{data}</p> */}
         <ButtonBgOrange title="Submit" />
-      </StyledForm>
+      </form>
     </StyledDiv>
   );
 };
