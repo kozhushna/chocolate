@@ -32,6 +32,10 @@ export const WrapperInput = styled.div`
   width: 100%;
   display: flex;
   column-gap: 22px;
+  @media screen and (${props => props.theme.devices.onlymobile}) {
+    row-gap: 14px;
+    flex-direction: column;
+  }
 `;
 
 export const StyledLabel = styled.div`

@@ -11,7 +11,7 @@ import {
   WrapperInput,
 } from './OderBuy.styled';
 import { ButtonBgOrange } from 'components/ButtonBgOrange/ButtonBgOrange';
-import { phonePatterns } from 'utils/globalConstants';
+import { emailRegex, phonePatterns } from 'utils/globalConstants';
 import { ErrorText } from 'components/ReviewForm/ReviewForm.styled';
 import { Accent } from 'App.styled';
 import { ChoiceWeight } from './WeightChocolate';
@@ -40,6 +40,7 @@ export const FormOderBuy = ({ action }) => {
       <form
         onSubmit={handleSubmit(data => {
           console.log(data);
+          action();
         })}
       >
         <StyledFormTitle>
@@ -50,13 +51,53 @@ export const FormOderBuy = ({ action }) => {
         <Wrapper>
           <StyledLabel htmlFor="firstName">Personal information</StyledLabel>
           <WrapperInput>
-            <StyledInput {...register('firstName')} placeholder="Name" />
-            <StyledInput {...register('surname')} placeholder="Surname" />
+            <StyledInput
+              type="text"
+              {...register('firstName', {
+                required: {
+                  value: true,
+                  message: 'Please enter your personal information',
+                },
+              })}
+              placeholder="Name"
+            />
+            <StyledInput
+              type="text"
+              {...register('surname', {
+                required: {
+                  value: true,
+                  message: 'Please enter your personal information',
+                },
+              })}
+              placeholder="Surname"
+            />
           </WrapperInput>
+          {(errors.firstName?.message && (
+            <ErrorText>{errors.firstName?.message}</ErrorText>
+          )) ||
+            (errors.surname?.message && (
+              <ErrorText>{errors.surname?.message}</ErrorText>
+            ))}
         </Wrapper>
         <Wrapper>
           <StyledLabel htmlFor="email">Email</StyledLabel>
-          <StyledInput {...register('email')} placeholder="Enter you email" />
+          <StyledInput
+            type="text"
+            {...register('email', {
+              required: {
+                value: true,
+                message: 'Please enter your email address',
+              },
+              pattern: {
+                value: emailRegex,
+                message: 'Invalid email address',
+              },
+            })}
+            placeholder="Enter you email"
+          />
+          {errors.email?.message && (
+            <ErrorText>{errors.email?.message}</ErrorText>
+          )}
         </Wrapper>
         <Wrapper>
           <StyledLabel htmlFor="phone">Phone number</StyledLabel>
@@ -86,16 +127,29 @@ export const FormOderBuy = ({ action }) => {
           />
           {errors['phone'] && <ErrorText>Invalid Phone</ErrorText>}
         </Wrapper>
-        {/* <Wrapper>
-          <StyledLabel htmlFor="card">Card number</StyledLabel>
-          <StyledInput {...register('card')} placeholder="Enter card" />
-        </Wrapper> */}
+
         <Wrapper>
           <StyledLabel htmlFor="Comment">Comment</StyledLabel>
-          <StyledTextarea {...register('comment')} placeholder="Enter text" />
+          <StyledTextarea
+            type="text"
+            {...register('comment', {
+              required: {
+                value: true,
+                message: 'Please enter your comment',
+              },
+
+              minLength: {
+                value: 2,
+                message: 'Your comment should be greater than 2 symbols',
+              },
+            })}
+            placeholder="Enter text"
+          />
+          {errors.comment?.message && (
+            <ErrorText>{errors.comment?.message}</ErrorText>
+          )}
         </Wrapper>
-        {/* <p>{data}</p> */}
-        <ButtonBgOrange title="Submit" />
+        <ButtonBgOrange title="Submit" action={handleSubmit} />
       </form>
     </StyledDiv>
   );
